@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 9999;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
@@ -62,6 +62,17 @@
   width: 100%;
 }
 
+/* Active navigation link styles */
+.nav-link.active {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: #667eea;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -91,7 +102,19 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  z-index: 60;
+}
+
+/* Hide mobile CTA container on desktop */
+.mobile-cta-container {
+  display: none;
+}
+
+.mobile-menu-toggle:hover {
+  background: rgba(102, 126, 234, 0.1);
 }
 
 .mobile-menu-toggle span {
@@ -99,38 +122,150 @@
   height: 3px;
   background: #2d3748;
   margin: 3px 0;
-  transition: 0.3s;
+  transition: all 0.3s ease;
   border-radius: 2px;
+  transform-origin: center;
+}
+
+/* Hamburger animation */
+.mobile-menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 /* Mobile responsive */
 @media (max-width: 768px) {
+  .header-container {
+    padding: 0 15px;
+  }
+  
+  .header-actions {
+    gap: 10px;
+  }
   .nav {
     position: fixed;
     top: 80px;
     left: 0;
     right: 0;
-    background: white;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(102, 126, 234, 0.1);
+    z-index: 1000;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
   }
 
   .nav.nav-open {
     transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-list {
     flex-direction: column;
-    padding: 20px;
-    gap: 20px;
+    padding: 30px 20px;
+    gap: 0;
+  }
+
+  .nav-list li {
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  }
+
+  .nav-list li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 20px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .nav-link:hover {
+    color: #667eea;
+    padding-left: 10px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  /* Active state for mobile navigation */
+  .nav-link.active {
+    color: #667eea;
+    font-weight: 700;
+    padding-left: 15px;
+    background: rgba(102, 126, 234, 0.1);
+    border-radius: 8px;
+    margin: 0 10px;
   }
 
   .mobile-menu-toggle {
-    display: flex;
+    display: flex !important;
+    position: relative;
+    z-index: 10000;
   }
 
   .cta-button {
-    display: none;
+    display: none !important;
+  }
+
+  /* Mobile CTA Button - Hidden on mobile */
+  .mobile-cta-container {
+    display: none !important;
+  }
+
+  .mobile-cta-button {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+
+  .mobile-cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+
+  .mobile-cta-button:active {
+    transform: translateY(0);
+  }
+}
+
+/* Additional mobile breakpoint for smaller screens */
+@media (max-width: 480px) {
+  .mobile-menu-toggle {
+    display: flex !important;
+  }
+  
+  .cta-button {
+    display: none !important;
+  }
+  
+  .mobile-cta-container {
+    display: none !important;
   }
 }
