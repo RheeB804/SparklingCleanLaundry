@@ -29,6 +29,36 @@
   background-clip: text;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.logo-link:hover {
+  transform: scale(1.02);
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+}
+
 .nav-list {
   display: flex;
   list-style: none;
@@ -253,6 +283,19 @@
   .mobile-cta-button:active {
     transform: translateY(0);
   }
+
+  .logo-link {
+    gap: 8px;
+  }
+
+  .logo-image {
+    height: 40px;
+    max-width: 120px;
+  }
+
+  .logo-text {
+    font-size: 1.4rem;
+  }
 }
 
 /* Additional mobile breakpoint for smaller screens */
@@ -267,5 +310,18 @@
   
   .mobile-cta-container {
     display: none !important;
+  }
+
+  .logo-link {
+    gap: 6px;
+  }
+
+  .logo-image {
+    height: 35px;
+    max-width: 100px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
   }
 }

@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
           <div className="feature">
             <span className="feature-icon">⭐</span>
-            <span>5-Star Rated</span>
+            <span>Highly Rated</span>
           </div>
           <div className="feature">
             <span className="feature-icon">🚀</span>

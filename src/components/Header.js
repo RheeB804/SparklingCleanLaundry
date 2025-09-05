@@ -59,7 +59,14 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1 className="text-2xl font-bold">✨ Sparkling Clean</h1>
+          <Link to="/" onClick={closeMenu} className="logo-link">
+            <img 
+              src="/images/logo/Logo.png" 
+              alt="Sparkling Clean Logo" 
+              className="logo-image"
+            />
+            <span className="logo-text">Sparkling Clean Laundry</span>
+          </Link>
         </div>
         
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
