@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
 
   const toggleMenu = () => {
     console.log('Toggle menu clicked, current state:', isMenuOpen);
@@ -14,37 +15,15 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
-  // Function to determine active section based on scroll position
-  const getActiveSection = () => {
-    const sections = ['home', 'services', 'about', 'contact'];
-    const scrollPosition = window.scrollY + 100; // Offset for header height
-
-    for (const section of sections) {
-      const element = document.getElementById(section);
-      if (element) {
-        const { offsetTop, offsetHeight } = element;
-        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-          return section;
-        }
-      }
-    }
-    return 'home'; // Default to home
+  // Get active page based on current route
+  const getActivePage = () => {
+    const path = location.pathname;
+    if (path === '/') return 'home';
+    if (path === '/services') return 'services';
+    if (path === '/about') return 'about';
+    if (path === '/contact') return 'contact';
+    return 'home';
   };
-
-  // Update active section on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      setActiveSection(getActiveSection());
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    // Set initial active section
-    setActiveSection(getActiveSection());
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   // Close menu when clicking outside or on escape key
   useEffect(() => {
@@ -86,40 +65,40 @@ const Header = () => {
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
             <li>
-              <a 
-                href="#home" 
-                className={`nav-link ${activeSection === 'home' ? 'active' : ''}`} 
+              <Link 
+                to="/" 
+                className={`nav-link ${getActivePage() === 'home' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#services" 
-                className={`nav-link ${activeSection === 'services' ? 'active' : ''}`} 
+              <Link 
+                to="/services" 
+                className={`nav-link ${getActivePage() === 'services' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
                 Services
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#about" 
-                className={`nav-link ${activeSection === 'about' ? 'active' : ''}`} 
+              <Link 
+                to="/about" 
+                className={`nav-link ${getActivePage() === 'about' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a 
-                href="#contact" 
-                className={`nav-link ${activeSection === 'contact' ? 'active' : ''}`} 
+              <Link 
+                to="/contact" 
+                className={`nav-link ${getActivePage() === 'contact' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           {/* Mobile CTA Button */}
