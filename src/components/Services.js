@@ -1,15 +1,18 @@
 import React from 'react';
 import './Services.css';
 import { Link } from 'react-router-dom';
+import { useTranslation } from '../hooks/useTranslation';
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const mainService = {
     id: 1,
     icon: '🧺🌀',
-    title: 'Self Serve Laundry',
-    description: 'Our modern washers and dryers make laundry quick, easy, and affordable. Whether you\'re handling a small load or tackling a week\'s worth of clothes, enjoy a clean, safe, and comfortable space with plenty of machines ready when you are. Open daily with convenient hours, our self-serve option gives you full control over your laundry routine.',
-    price: 'Starts at $4 per load',
-    button: 'View Location',
+    title: t('services.selfServe.title'),
+    description: t('services.selfServe.description'),
+    price: t('services.selfServe.price'),
+    button: t('services.selfServe.button'),
     link: '/contact'
   };
 
@@ -17,19 +20,19 @@ const Services = () => {
     {
       id: 2,
       icon: '🧺✨',
-      title: 'Fluff & Fold',
-      description: 'Skip laundry day and let us do the work for you! Drop off your clothes and our team will wash, dry, and neatly fold them with care. Priced by the pound, it\'s the perfect way to save time and enjoy fresh, ready-to-wear laundry without the hassle.',
-      price: 'Starts at $1.75 per pound',
-      button: 'Learn More',
+      title: t('services.fluffFold.title'),
+      description: t('services.fluffFold.description'),
+      price: t('services.fluffFold.price'),
+      button: t('services.fluffFold.button'),
       link: '/flufffold'
     },
     {
       id: 3,
       icon: '🚚🧺✨',
-      title: 'Pickup & Delivery Laundry Service',
-      description: 'Laundry made effortless. We\'ll come to your door, pick up your clothes, wash and fold them with care, then deliver them back fresh and neatly packed. Perfect for busy families, professionals, or businesses — all with simple scheduling and reliable service.',
-      price: 'Starts at $2.25 per pound',
-      button: 'Book Now',
+      title: t('services.pickupDelivery.title'),
+      description: t('services.pickupDelivery.description'),
+      price: t('services.pickupDelivery.price'),
+      button: t('services.pickupDelivery.button'),
       link: '/pickupdelivery'
     }
   ];
@@ -51,7 +54,7 @@ const Services = () => {
 
           {/* Sub Services */}
           <div className="sub-services">
-            <h4 className="sub-services-title">Specialized Services</h4>
+            <h4 className="sub-services-title">{t('services.specializedServices')}</h4>
             <div className="sub-services-grid">
               {subServices.map((service) => (
                 <div key={service.id} className="service-card sub-service-card">

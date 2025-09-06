@@ -43,6 +43,37 @@ The application uses the following environment variables for EmailJS configurati
 
 **Note**: All React environment variables must be prefixed with `REACT_APP_` to be accessible in the browser.
 
+## SEO Features
+
+This website is fully optimized for search engines with the following features:
+
+### Meta Tags & Structured Data
+- Comprehensive meta tags for title, description, keywords
+- Open Graph tags for social media sharing
+- Twitter Card optimization
+- JSON-LD structured data for local business
+- Geographic location data for local SEO
+
+### Technical SEO
+- XML sitemap (`/sitemap.xml`)
+- Robots.txt file (`/robots.txt`)
+- Canonical URLs
+- Proper heading hierarchy (H1, H2, H3)
+- Optimized images with alt tags
+- Service Worker for performance
+
+### Performance Optimizations
+- Service Worker for caching
+- Image optimization with lazy loading
+- Preconnect to external domains
+- Progressive Web App (PWA) features
+
+### Local SEO
+- Business address and contact information
+- Opening hours specification
+- Service area targeting
+- Local business schema markup
+
 ## Getting Started
 
 ### Prerequisites

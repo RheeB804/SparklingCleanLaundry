@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { useTranslation } from '../hooks/useTranslation';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -90,51 +92,51 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="contact-container">
         <div className="section-header">
-          <h2>Get In Touch</h2>
-          <p>Ready to make your laundry sparkle? Contact us today!</p>
+          <h2>{t('contact.title')}</h2>
+          <p>{t('contact.subtitle')}</p>
         </div>
         
         <div className="contact-content">
           <div className="contact-info">
-            <h3>Contact Information</h3>
+            <h3>{t('contact.contactInfo')}</h3>
             <div className="contact-item">
               <span className="contact-icon">📞</span>
               <div>
-                <h4>Phone</h4>
+                <h4>{t('contact.phone')}</h4>
                 <p>(323) 840-1696</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">✉️</span>
               <div>
-                <h4>Email</h4>
+                <h4>{t('contact.email')}</h4>
                 <p>info@thesparklingcleanlaundry.com</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <div>
-                <h4>Service Area</h4>
+                <h4>{t('contact.location')}</h4>
                 <p>5127 Whittier Blvd, East Los Angeles, CA 90022</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">🕒</span>
               <div>
-                <h4>Hours</h4>
-                <p>Mon-Thurs: 6AM-12AM (Last load at 10:30PM)<br/>Fri: 6AM-1AM (Last load at 11:30AM)<br/>Sat-Sun: 5AM-1AM (Last load at 11:30AM)</p>
+                <h4>{t('contact.hours')}</h4>
+                <p>{t('contact.hoursDetails.weekdays')}<br/>{t('contact.hoursDetails.friday')}<br/>{t('contact.hoursDetails.weekend')}</p>
               </div>
             </div>
           </div>
           
           <div className="contact-form">
-            <h3>Contact Us</h3>
+            <h3>{t('contact.contactUs')}</h3>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
                   type="text"
                   name="name"
-                  placeholder="Your Name"
+                  placeholder={t('contact.form.name')}
                   value={formData.name}
                   onChange={handleChange}
                   required
@@ -144,7 +146,7 @@ const Contact = () => {
                 <input
                   type="email"
                   name="email"
-                  placeholder="Your Email"
+                  placeholder={t('contact.form.email')}
                   value={formData.email}
                   onChange={handleChange}
                   required
@@ -154,7 +156,7 @@ const Contact = () => {
                 <input
                   type="tel"
                   name="phone"
-                  placeholder="Your Phone"
+                  placeholder={t('contact.form.phone')}
                   value={formData.phone}
                   onChange={handleChange}
                   required
@@ -167,10 +169,10 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">Select a Service</option>
-                  <option value="residential">Self Serve Laundry</option>
-                  <option value="commercial">Fluff & Fold</option>
-                  <option value="deep-cleaning">Pickup & Delivery Laundry Service</option>
+                  <option value="">{t('contact.form.service')}</option>
+                  <option value="residential">{t('contact.form.services.residential')}</option>
+                  <option value="commercial">{t('contact.form.services.commercial')}</option>
+                  <option value="deep-cleaning">{t('contact.form.services.deepCleaning')}</option>
                 </select>
               </div>
               <div className="form-group">
@@ -180,24 +182,24 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                 >
-                  <option value="">Preferred Contact Method</option>
-                  <option value="phone">Phone Call</option>
-                  <option value="email">Email</option>
-                  <option value="text">Text Message</option>
-                  <option value="any">Any Method</option>
+                  <option value="">{t('contact.form.communication')}</option>
+                  <option value="phone">{t('contact.form.communicationMethods.phone')}</option>
+                  <option value="email">{t('contact.form.communicationMethods.email')}</option>
+                  <option value="text">{t('contact.form.communicationMethods.text')}</option>
+                  <option value="any">{t('contact.form.communicationMethods.any')}</option>
                 </select>
               </div>
               <div className="form-group">
                 <textarea
                   name="message"
-                  placeholder="Tell us about your cleaning needs..."
+                  placeholder={t('contact.form.message')}
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
                 ></textarea>
               </div>
               <button type="submit" className="submit-button">
-                Send Message
+                {t('contact.form.submit')}
               </button>
             </form>
           </div>

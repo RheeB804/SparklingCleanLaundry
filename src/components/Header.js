@@ -1,13 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useLanguage } from '../contexts/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
 import './Header.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  
+  let language, toggleLanguage;
+  try {
+    const languageContext = useLanguage();
+    language = languageContext.language;
+    toggleLanguage = languageContext.toggleLanguage;
+  } catch (error) {
+    console.error('Error in useLanguage:', error);
+    language = 'en';
+    toggleLanguage = () => {};
+  }
+  
+  let t;
+  try {
+    const translationContext = useTranslation();
+    t = translationContext.t;
+  } catch (error) {
+    console.error('Error in useTranslation:', error);
+    t = (key) => key; // Fallback function
+  }
+
 
   const toggleMenu = () => {
-    console.log('Toggle menu clicked, current state:', isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -62,8 +84,11 @@ const Header = () => {
           <Link to="/" onClick={closeMenu} className="logo-link">
             <img 
               src="/images/logo/Logo.png" 
-              alt="Sparkling Clean Logo" 
+              alt="Sparkling Clean Laundry - Professional Laundry Services in East Los Angeles" 
               className="logo-image"
+              width="200"
+              height="50"
+              loading="eager"
             />
             <span className="logo-text">Sparkling Clean Laundry</span>
           </Link>
@@ -77,7 +102,7 @@ const Header = () => {
                 className={`nav-link ${getActivePage() === 'home' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
-                Home
+                {t('nav.home')}
               </Link>
             </li>
             <li className="nav-dropdown">
@@ -86,7 +111,7 @@ const Header = () => {
                 className={`nav-link ${getActivePage() === 'services' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
-                Services
+                {t('nav.services')}
               </Link>
               <ul className="nav-submenu">
                 <li>
@@ -95,7 +120,7 @@ const Header = () => {
                     className="nav-sublink" 
                     onClick={closeMenu}
                   >
-                    Fluff & Fold
+                    {t('nav.fluffFold')}
                   </Link>
                 </li>
                 <li>
@@ -104,7 +129,7 @@ const Header = () => {
                     className="nav-sublink" 
                     onClick={closeMenu}
                   >
-                    Pickup & Delivery
+                    {t('nav.pickupDelivery')}
                   </Link>
                 </li>
               </ul>
@@ -115,7 +140,7 @@ const Header = () => {
                 className={`nav-link ${getActivePage() === 'about' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
-                About
+                {t('nav.about')}
               </Link>
             </li>
             <li>
@@ -124,7 +149,7 @@ const Header = () => {
                 className={`nav-link ${getActivePage() === 'contact' ? 'active' : ''}`} 
                 onClick={closeMenu}
               >
-                Contact
+                {t('nav.contact')}
               </Link>
             </li>
           </ul>
@@ -137,6 +162,22 @@ const Header = () => {
         </nav>
 
         <div className="header-actions">
+          <div className="language-toggle-container">
+            <span className="language-label">
+              {(language || 'en') === 'en' ? 'Language:' : 'Idioma:'}
+            </span>
+            <button 
+              className="language-toggle" 
+              onClick={() => {
+                if (toggleLanguage) {
+                  toggleLanguage();
+                }
+              }} 
+              title={(language || 'en') === 'en' ? 'Switch to Spanish / Cambiar a Español' : 'Switch to English / Cambiar a Inglés'}
+            >
+              {(language || 'en') === 'en' ? 'ES' : 'EN'}
+            </button>
+          </div>
           <button className="cta-button">Get Quote</button>
           <button 
             className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`} 

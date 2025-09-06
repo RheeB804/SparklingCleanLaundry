@@ -7,7 +7,7 @@ const FluffFoldPage = () => {
       <div className="page-header">
         <div className="container">
           <h1>Fluff & Fold Service</h1>
-          <p>Professional laundry service with same-day turnaround</p>
+          <p>Professional laundry service with next-day or same-day turnaround</p>
         </div>
       </div>
 
@@ -53,12 +53,12 @@ const FluffFoldPage = () => {
               <h3>Pricing</h3>
               <div className="pricing-card">
                 <div className="price-item">
-                  <span className="item">Regular Clothes</span>
-                  <span className="price">$1.25/lb</span>
+                  <span className="item">Next-Day Service</span>
+                  <span className="price">$1.75/lb</span>
                 </div>
                 <div className="price-item">
-                  <span className="item">Delicate Items</span>
-                  <span className="price">$2.50/lb</span>
+                  <span className="item">Same-Day Service</span>
+                  <span className="price">$2.25/lb</span>
                 </div>
                 <div className="price-item">
                   <span className="item">Comforters</span>
@@ -66,7 +66,7 @@ const FluffFoldPage = () => {
                 </div>
                 <div className="price-item">
                   <span className="item">Minimum Charge</span>
-                  <span className="price">$8.00</span>
+                  <span className="price">20lbs</span>
                 </div>
               </div>
               

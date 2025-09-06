@@ -35,6 +35,8 @@
   gap: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
+  flex-shrink: 1;
+  max-width: 300px;
 }
 
 .logo-link:hover {
@@ -171,7 +173,42 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  flex-shrink: 0;
+  min-width: 200px;
+}
+
+.language-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-label {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.language-toggle {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border: 2px solid #667eea;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 50px;
+}
+
+.language-toggle:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
 .cta-button {
@@ -243,7 +280,29 @@
   }
   
   .header-actions {
-    gap: 10px;
+    gap: 8px;
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 1 !important;
+    min-width: auto !important;
+    max-width: 150px;
+  }
+
+  .language-toggle-container {
+    gap: 4px;
+  }
+  
+  .language-label {
+    display: none;
+  }
+  
+  .language-toggle {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    min-width: 35px;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   .nav {
     position: fixed;
@@ -415,6 +474,32 @@
   
   .cta-button {
     display: none !important;
+  }
+  
+  .header-actions {
+    gap: 6px;
+    display: flex !important;
+    align-items: center !important;
+    flex-shrink: 1 !important;
+    min-width: auto !important;
+    max-width: 120px;
+  }
+  
+  .language-toggle-container {
+    gap: 2px;
+  }
+  
+  .language-label {
+    display: none;
+  }
+
+  .language-toggle {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+    min-width: 30px;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   .mobile-cta-container {

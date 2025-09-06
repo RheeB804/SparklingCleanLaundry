@@ -1,39 +1,38 @@
 import React from 'react';
 import './About.css';
+import { useTranslation } from '../hooks/useTranslation';
 
 const About = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="about">
       <div className="about-container">
         <div className="about-content">
           <div className="about-text">
-            <h2>About Sparkling Clean Laundry</h2>
+            <h2>{t('about.title')}</h2>
             <p className="about-lead">
-              We're passionate about creating clean, healthy environments for our clients.
+              {t('about.lead')}
             </p>
             <p>
-              Founded with a simple mission to provide exceptional laundry services, 
-              Sparkling Clean Laundry has been serving our community with dedication and 
-              attention to detail.
+              {t('about.description1')}
             </p>
             <p>
-              Our team of professionals uses proven techniques to ensure your 
-              clothes not only looks clean but 
-              feels fresh and healthy.
+              {t('about.description2')}
             </p>
             
             <div className="about-stats">
               <div className="stat">
                 <span className="stat-number">1000s</span>
-                <span className="stat-label">Happy Clients</span>
+                <span className="stat-label">{t('about.stats.clients')}</span>
               </div>
               <div className="stat">
                 <span className="stat-number">4.5+</span>
-                <span className="stat-label">Star Rating</span>
+                <span className="stat-label">{t('about.stats.rating')}</span>
               </div>
               <div className="stat">
                 <span className="stat-number">10+</span>
-                <span className="stat-label">Years Experience</span>
+                <span className="stat-label">{t('about.stats.experience')}</span>
               </div>
             </div>
           </div>
@@ -49,18 +48,18 @@ const About = () => {
         <div className="about-features">
           <div className="feature-item">
             <span className="feature-icon">🌱</span>
-            <h3>Eco-Friendly</h3>
-            <p>Safe, non-toxic cleaning products</p>
+            <h3>{t('about.features.eco.title')}</h3>
+            <p>{t('about.features.eco.description')}</p>
           </div>
           <div className="feature-item">
             <span className="feature-icon">🕒</span>
-            <h3>Reliable</h3>
-            <p>Always on time, every time</p>
+            <h3>{t('about.features.reliable.title')}</h3>
+            <p>{t('about.features.reliable.description')}</p>
           </div>
           <div className="feature-item">
             <span className="feature-icon">🛡️</span>
-            <h3>Insured</h3>
-            <p>Fully licensed and insured</p>
+            <h3>{t('about.features.insured.title')}</h3>
+            <p>{t('about.features.insured.description')}</p>
           </div>
         </div>
       </div>

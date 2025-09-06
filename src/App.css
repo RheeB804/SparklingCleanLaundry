@@ -108,6 +108,15 @@ body {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+  
+  .App {
+    overflow-x: hidden;
+  }
+  
   .section-header h2 {
     font-size: 2rem;
   }
