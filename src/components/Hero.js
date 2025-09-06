@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -7,16 +8,17 @@ const Hero = () => {
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">
-            Professional Cleaning Services
-            <span className="highlight"> That Sparkle</span>
+            Fresh, Fast & Flawless Laundry Care
+            <span className="highlight"> That Sparkles</span>
           </h1>
           <p className="hero-subtitle">
-            Transform your space with our expert cleaning solutions. 
-            From homes to offices, we deliver spotless results every time.
+            From self-service to same-day fluff & fold, and even pickup & delivery — 
+            we make laundry day effortless. Let us handle the load, so you can enjoy 
+            more of your day.
           </p>
           <div className="hero-actions">
-            <button className="primary-button">Book Now</button>
-            <button className="secondary-button">Learn More</button>
+            <Link to="/services" className="primary-button">Learn More</Link>
+            {/* <button className="secondary-button">Learn More</button> */}
           </div>
         </div>
         

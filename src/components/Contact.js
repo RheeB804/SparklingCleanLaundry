@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -7,6 +8,7 @@ const Contact = () => {
     email: '',
     phone: '',
     service: '',
+    communication: '',
     message: ''
   });
 
@@ -19,9 +21,55 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    
+    // EmailJS configuration
+    const serviceId = 'service_eoeh9ih'; // Replace with your EmailJS service ID
+    const templateId = 'template_ee6bopj'; // Replace with your EmailJS template ID
+    const publicKey = 'QJkLPhuVA-hGrOrJO'; // Replace with your EmailJS public key
+    
+    // Send email using EmailJS
+    emailjs.send(serviceId, templateId, {
+      to_name: 'Bryan',
+      from_name: formData.name,
+      from_email: formData.email,
+      phone: formData.phone,
+      service: formData.service,
+      communication: formData.communication,
+      message: formData.message,
+      reply_to: formData.email
+    }, publicKey)
+    .then((result) => {
+      console.log('Email sent successfully:', result.text);
+      alert('Thank you for your message! We\'ll get back to you soon.');
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        service: '',
+        communication: '',
+        message: ''
+      });
+    })
+    .catch((error) => {
+      console.error('EmailJS Error Details:', error);
+      console.error('Error Status:', error.status);
+      console.error('Error Text:', error.text);
+      
+      let errorMessage = 'Sorry, there was an error sending your message. ';
+      
+      if (error.status === 400) {
+        errorMessage += 'Please check that all required fields are filled.';
+      } else if (error.status === 401) {
+        errorMessage += 'Authentication error. Please contact us directly.';
+      } else if (error.status === 403) {
+        errorMessage += 'Access denied. Please try again later.';
+      } else {
+        errorMessage += 'Please try again or call us directly at (323) 840-1696.';
+      }
+      
+      alert(errorMessage);
+    });
   };
 
   return (
@@ -29,7 +77,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="section-header">
           <h2>Get In Touch</h2>
-          <p>Ready to make your space sparkle? Contact us today!</p>
+          <p>Ready to make your laundry sparkle? Contact us today!</p>
         </div>
         
         <div className="contact-content">
@@ -39,34 +87,34 @@ const Contact = () => {
               <span className="contact-icon">📞</span>
               <div>
                 <h4>Phone</h4>
-                <p>(555) 123-4567</p>
+                <p>(323) 840-1696</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">✉️</span>
               <div>
                 <h4>Email</h4>
-                <p>info@sparklingclean.com</p>
+                <p>info@thesparklingcleanlaundry.com</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
               <div>
                 <h4>Service Area</h4>
-                <p>Greater Metropolitan Area</p>
+                <p>5127 Whittier Blvd, East Los Angeles, CA 90022</p>
               </div>
             </div>
             <div className="contact-item">
               <span className="contact-icon">🕒</span>
               <div>
                 <h4>Hours</h4>
-                <p>Mon-Fri: 8AM-6PM<br/>Sat: 9AM-4PM</p>
+                <p>Mon-Thurs: 6AM-12AM (Last load at 10:30PM)<br/>Fri: 6AM-1AM (Last load at 11:30AM)<br/>Sat-Sun: 5AM-1AM (Last load at 11:30AM)</p>
               </div>
             </div>
           </div>
           
           <div className="contact-form">
-            <h3>Request a Quote</h3>
+            <h3>Contact Us</h3>
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input
@@ -95,6 +143,7 @@ const Contact = () => {
                   placeholder="Your Phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
                 />
               </div>
               <div className="form-group">
@@ -105,12 +154,23 @@ const Contact = () => {
                   required
                 >
                   <option value="">Select a Service</option>
-                  <option value="residential">Residential Cleaning</option>
-                  <option value="commercial">Commercial Cleaning</option>
-                  <option value="deep-cleaning">Deep Cleaning</option>
-                  <option value="window-cleaning">Window Cleaning</option>
-                  <option value="carpet-cleaning">Carpet Cleaning</option>
-                  <option value="post-construction">Post-Construction</option>
+                  <option value="residential">Self Serve Laundry</option>
+                  <option value="commercial">Fluff & Fold</option>
+                  <option value="deep-cleaning">Pickup & Delivery Laundry Service</option>
+                </select>
+              </div>
+              <div className="form-group">
+                <select
+                  name="communication"
+                  value={formData.communication}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Preferred Contact Method</option>
+                  <option value="phone">Phone Call</option>
+                  <option value="email">Email</option>
+                  <option value="text">Text Message</option>
+                  <option value="any">Any Method</option>
                 </select>
               </div>
               <div className="form-group">

@@ -7,7 +7,7 @@ const ServicesPage = () => {
       <div className="page-header">
         <div className="container">
           <h1>Our Services</h1>
-          <p>Professional cleaning services tailored to your needs</p>
+          <p>Professional laundromat services tailored to your needs</p>
         </div>
       </div>
       <Services />
