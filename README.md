@@ -30,7 +30,18 @@ A modern React application for a cleaning service website built with React, Tail
 - React 19.1.1
 - React Router DOM 7.8.2
 - Tailwind CSS 3.4.17
+- EmailJS for contact form
 - Create React App
+
+## Environment Variables
+
+The application uses the following environment variables for EmailJS configuration:
+
+- `REACT_APP_EMAILJS_SERVICE_ID` - Your EmailJS service ID
+- `REACT_APP_EMAILJS_TEMPLATE_ID` - Your EmailJS template ID  
+- `REACT_APP_EMAILJS_PUBLIC_KEY` - Your EmailJS public key
+
+**Note**: All React environment variables must be prefixed with `REACT_APP_` to be accessible in the browser.
 
 ## Getting Started
 
@@ -56,12 +67,21 @@ cd sparkling-clean-react
 npm install
 ```
 
-4. Start the development server:
+4. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Update the EmailJS configuration with your actual values:
+   ```
+   REACT_APP_EMAILJS_SERVICE_ID=your_service_id_here
+   REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id_here
+   REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key_here
+   ```
+
+5. Start the development server:
 ```bash
 npm start
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Available Scripts
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -7,49 +8,63 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>✨ Sparkling Clean</h3>
+            <div className="footer-logo">
+              <img 
+                src="/images/logo/Logo.png" 
+                alt="Sparkling Clean Logo" 
+                className="footer-logo-image"
+              />
+              <h3>Sparkling Clean Laundry</h3>
+            </div>
             <p>
-              Professional cleaning services that transform your space 
-              and exceed your expectations.
+              Fresh, Fast & Flawless Laundry Care That Sparkles. 
+              From self-service to same-day fluff & fold, and even pickup & delivery.
             </p>
             <div className="social-links">
-              <a href="#" className="social-link">📘</a>
-              <a href="#" className="social-link">📷</a>
-              <a href="#" className="social-link">🐦</a>
-              <a href="#" className="social-link">💼</a>
+              <a href="#" className="social-link" aria-label="Facebook">📘</a>
+              <a href="#" className="social-link" aria-label="Instagram">📷</a>
+              <a href="#" className="social-link" aria-label="Twitter">🐦</a>
+              <a href="#" className="social-link" aria-label="LinkedIn">💼</a>
             </div>
           </div>
           
           <div className="footer-section">
-            <h4>Services</h4>
+            <h4>Our Services</h4>
             <ul>
-              <li><a href="#services">Residential Cleaning</a></li>
-              <li><a href="#services">Commercial Cleaning</a></li>
-              <li><a href="#services">Deep Cleaning</a></li>
-              <li><a href="#services">Window Cleaning</a></li>
+              <li><Link to="/services">Self Serve Laundry</Link></li>
+              <li><Link to="/flufffold">Fluff & Fold</Link></li>
+              <li><Link to="/pickupdelivery">Pickup & Delivery</Link></li>
+              <li><Link to="/services">All Services</Link></li>
             </ul>
           </div>
           
           <div className="footer-section">
-            <h4>Company</h4>
+            <h4>Quick Links</h4>
             <ul>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Privacy Policy</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><a href="#contact">Get Quote</a></li>
             </ul>
           </div>
           
           <div className="footer-section">
             <h4>Contact Info</h4>
-            <p>📞 (555) 123-4567</p>
-            <p>✉️ info@sparklingclean.com</p>
-            <p>📍 Greater Metropolitan Area</p>
+            <div className="footer-contact">
+              <p>📞 (323) 840-1696</p>
+              <p>✉️ info@thesparklingcleanlaundry.com</p>
+              <p>📍 5127 Whittier Blvd, East Los Angeles, CA 90022</p>
+              <p>🕒 Mon-Thurs: 6AM-12AM | Fri-Sun: 5AM-1AM</p>
+            </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <p>&copy; 2024 Sparkling Clean. All rights reserved.</p>
+          <p>&copy; 2024 Sparkling Clean Laundry. All rights reserved.</p>
+          <div className="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
         </div>
       </div>
     </footer>

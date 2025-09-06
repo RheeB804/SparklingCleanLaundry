@@ -22,10 +22,24 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // EmailJS configuration
-    const serviceId = 'service_eoeh9ih'; // Replace with your EmailJS service ID
-    const templateId = 'template_ee6bopj'; // Replace with your EmailJS template ID
-    const publicKey = 'QJkLPhuVA-hGrOrJO'; // Replace with your EmailJS public key
+                // EmailJS configuration from environment variables with fallback
+                const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_eoeh9ih';
+                const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_ee6bopj';
+                const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'QJkLPhuVA-hGrOrJO';
+                
+                // Debug: Check if environment variables are loaded
+                console.log('Environment variables:', {
+                  serviceId,
+                  templateId,
+                  publicKey
+                });
+                
+                // Debug: Check if using environment variables or fallback
+                if (process.env.REACT_APP_EMAILJS_SERVICE_ID) {
+                  console.log('Using environment variables');
+                } else {
+                  console.log('Using fallback values');
+                }
     
     // Send email using EmailJS
     emailjs.send(serviceId, templateId, {

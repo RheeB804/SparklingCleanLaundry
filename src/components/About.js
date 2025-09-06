@@ -7,32 +7,32 @@ const About = () => {
       <div className="about-container">
         <div className="about-content">
           <div className="about-text">
-            <h2>About Sparkling Clean</h2>
+            <h2>About Sparkling Clean Laundry</h2>
             <p className="about-lead">
               We're passionate about creating clean, healthy environments for our clients.
             </p>
             <p>
-              Founded with a simple mission to provide exceptional cleaning services, 
-              Sparkling Clean has been serving our community with dedication and 
-              attention to detail since 2020.
+              Founded with a simple mission to provide exceptional laundry services, 
+              Sparkling Clean Laundry has been serving our community with dedication and 
+              attention to detail.
             </p>
             <p>
-              Our team of certified professionals uses eco-friendly products and 
-              proven techniques to ensure your space not only looks clean but 
+              Our team of professionals uses proven techniques to ensure your 
+              clothes not only looks clean but 
               feels fresh and healthy.
             </p>
             
             <div className="about-stats">
               <div className="stat">
-                <span className="stat-number">500+</span>
+                <span className="stat-number">1000s</span>
                 <span className="stat-label">Happy Clients</span>
               </div>
               <div className="stat">
-                <span className="stat-number">4.9</span>
+                <span className="stat-number">4.5+</span>
                 <span className="stat-label">Star Rating</span>
               </div>
               <div className="stat">
-                <span className="stat-number">3+</span>
+                <span className="stat-number">10+</span>
                 <span className="stat-label">Years Experience</span>
               </div>
             </div>
@@ -40,8 +40,8 @@ const About = () => {
           
           <div className="about-image">
             <div className="image-placeholder">
-              <span>🧹✨</span>
-              <p>Professional Cleaning Team</p>
+              <span>🚚🧺✨</span>
+              <p>Professional Washing Team</p>
             </div>
           </div>
         </div>
