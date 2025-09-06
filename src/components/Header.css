@@ -103,6 +103,71 @@
   background: #667eea;
 }
 
+/* Dropdown Menu Styles */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown:hover .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nav-submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-submenu li {
+  margin: 0;
+}
+
+.nav-sublink {
+  display: block;
+  padding: 12px 20px;
+  color: #4a5568;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-sublink:hover {
+  color: #667eea;
+  background: rgba(102, 126, 234, 0.05);
+  padding-left: 25px;
+}
+
+.nav-sublink::before {
+  content: '→';
+  position: absolute;
+  left: 15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #667eea;
+}
+
+.nav-sublink:hover::before {
+  opacity: 1;
+  left: 20px;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -216,6 +281,50 @@
 
   .nav-list li:last-child {
     border-bottom: none;
+  }
+
+  /* Mobile Dropdown Styles */
+  .nav-dropdown:hover .nav-submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    position: static;
+    box-shadow: none;
+    border: none;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 0;
+    margin-top: 0;
+  }
+
+  .nav-submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-sublink {
+    padding: 15px 40px;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  }
+
+  .nav-sublink:last-child {
+    border-bottom: none;
+  }
+
+  .nav-sublink::before {
+    left: 20px;
+  }
+
+  .nav-sublink:hover::before {
+    left: 25px;
   }
 
   .nav-link {

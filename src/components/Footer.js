@@ -31,10 +31,14 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Our Services</h4>
             <ul>
-              <li><Link to="/services">Self Serve Laundry</Link></li>
-              <li><Link to="/flufffold">Fluff & Fold</Link></li>
-              <li><Link to="/pickupdelivery">Pickup & Delivery</Link></li>
               <li><Link to="/services">All Services</Link></li>
+              <li className="service-category">
+                <span className="service-main">Self Serve Laundry</span>
+                <ul className="service-submenu">
+                  <li><Link to="/flufffold">Fluff & Fold</Link></li>
+                  <li><Link to="/pickupdelivery">Pickup & Delivery</Link></li>
+                </ul>
+              </li>
             </ul>
           </div>
           

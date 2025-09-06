@@ -17,8 +17,9 @@ const Hero = () => {
             more of your day.
           </p>
           <div className="hero-actions">
-            <Link to="/services" className="primary-button">Learn More</Link>
-            {/* <button className="secondary-button">Learn More</button> */}
+            <Link to="/services" className="primary-button">All Services</Link>
+            <Link to="/flufffold" className="secondary-button">Fluff & Fold</Link>
+            <Link to="/pickupdelivery" className="secondary-button">Pickup & Delivery</Link>
           </div>
         </div>
         

@@ -80,7 +80,7 @@ const Header = () => {
                 Home
               </Link>
             </li>
-            <li>
+            <li className="nav-dropdown">
               <Link 
                 to="/services" 
                 className={`nav-link ${getActivePage() === 'services' ? 'active' : ''}`} 
@@ -88,6 +88,26 @@ const Header = () => {
               >
                 Services
               </Link>
+              <ul className="nav-submenu">
+                <li>
+                  <Link 
+                    to="/flufffold" 
+                    className="nav-sublink" 
+                    onClick={closeMenu}
+                  >
+                    Fluff & Fold
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    to="/pickupdelivery" 
+                    className="nav-sublink" 
+                    onClick={closeMenu}
+                  >
+                    Pickup & Delivery
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link 
