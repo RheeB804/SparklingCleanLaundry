@@ -33,6 +33,7 @@ export const es = {
   // Services
   services: {
     title: 'Nuestros Servicios',
+    subtitle: 'Servicios de lavandería profesionales adaptados a tus necesidades',
     specializedServices: 'Servicios Especializados',
     selfServe: {
       title: 'Lavandería de Autoservicio',
@@ -44,13 +45,117 @@ export const es = {
       title: 'Lavado y Doblado',
       description: '¡Omite el día de lavandería y déjanos hacer el trabajo por ti! Deja tu ropa y nuestro equipo la lavará, secará y doblará cuidadosamente. Precio por libra, es la manera perfecta de ahorrar tiempo y disfrutar de ropa fresca y lista para usar sin la molestia.',
       price: 'Comienza en $1.75 por libra',
-      button: 'Saber Más'
+      button: 'Saber Más',
+      pageTitle: 'Servicio de Lavado y Doblado',
+      pageSubtitle: 'Servicio de lavandería profesional con entrega al día siguiente o el mismo día',
+      whatIs: '¿Qué es Lavado y Doblado?',
+      whatIsDescription: 'Nuestro servicio de Lavado y Doblado elimina las molestias del día de lavandería. Simplemente deja tu ropa y la lavaremos, secaremos y doblaremos a la perfección. Perfecto para profesionales ocupados, familias y cualquiera que quiera ahorrar tiempo.',
+      features: {
+        sameDay: {
+          title: 'Servicio el Mismo Día',
+          description: 'Deja por la mañana, recoge por la tarde'
+        },
+        professional: {
+          title: 'Profesional',
+          description: 'Manejo experto de todos los tipos de tela y artículos especiales'
+        },
+        folded: {
+          title: 'Perfectamente Doblado',
+          description: 'Tu ropa regresa perfectamente doblada y organizada'
+        }
+      },
+      pricing: 'Precios',
+      pricingItems: {
+        nextDay: {
+          title: 'Servicio al Día Siguiente',
+          helper: 'Deja hoy, listo mañana\n24h de entrega',
+          price: '$1.75/lb'
+        },
+        sameDay: {
+          title: 'Servicio el Mismo Día',
+          helper: 'Deja antes del mediodía,\nlisto por la tarde',
+          price: '$2.25/lb'
+        },
+        comforters: {
+          title: 'Edredones',
+          price: '$13.00 cada uno'
+        }
+      },
+      howItWorks: 'Cómo Funciona',
+      steps: {
+        step1: {
+          title: 'Deja',
+          description: 'Trae tu ropa a nuestra ubicación'
+        },
+        step2: {
+          title: 'Lavamos y Doblamos',
+          description: 'Limpieza y doblado profesional'
+        },
+        step3: {
+          title: 'Recoge',
+          description: 'Recoge tu ropa fresca y doblada'
+        }
+      }
     },
     pickupDelivery: {
       title: 'Servicio de Lavandería de Recogida y Entrega',
       description: 'Lavandería sin esfuerzo. Iremos a tu puerta, recogeremos tu ropa, la lavaremos y doblaremos con cuidado, luego la entregaremos fresca y ordenadamente empacada. Perfecto para familias ocupadas, profesionales o negocios — todo con programación simple y servicio confiable.',
       price: 'Comienza en $2.25 por libra',
-      button: 'Reservar Ahora'
+      button: 'Reservar Ahora',
+      pageTitle: 'Servicio de Recogida y Entrega',
+      pageSubtitle: 'Servicio de lavandería conveniente directamente a tu puerta',
+      whatIs: 'Servicio de Lavandería Puerta a Puerta',
+      whatIsDescription: '¡Omite el viaje a la lavandería! Nuestro servicio de recogida y entrega lleva la conveniencia del cuidado profesional de lavandería directamente a tu hogar u oficina. Programa una recogida y nosotros nos encargamos del resto.',
+      features: {
+        pickup: {
+          title: 'Recogida y Entrega',
+          description: 'Recogemos y entregamos dentro de nuestra área de servicio'
+        },
+        scheduling: {
+          title: 'Programación Fácil',
+          description: 'Llámanos para programar tu recogida y entrega'
+        },
+        secure: {
+          title: 'Seguro y Protegido',
+          description: 'Tus artículos son rastreados y protegidos durante todo el proceso'
+        }
+      },
+      pricing: 'Precios',
+      pricingItems: {
+        twoDay: {
+          title: 'Servicio de 2 Días',
+          price: '$2.50/lb'
+        },
+        comforters: {
+          title: 'Edredones',
+          price: '$18.00 cada uno'
+        },
+        minimum: {
+          title: 'Libras Mínimas',
+          price: '10 lbs'
+        }
+      },
+      serviceAreas: 'Áreas de Servicio',
+      serviceAreasDescription: 'Servimos con orgullo las siguientes áreas:',
+      areas: [
+        'Centro de Los Ángeles',
+        'Hollywood',
+        'West Hollywood',
+        'Beverly Hills',
+        'Santa Mónica',
+        'Venice',
+        'Culver City',
+        'West LA',
+        'Mid-Wilshire',
+        'Koreatown'
+      ],
+      cta: {
+        title: '¿Listo para Comenzar?',
+        description: '¡Llámanos para programar tu servicio de recogida y entrega hoy!',
+        button: 'Llámanos para Programar Recogida',
+        buttonMobile: 'Llámanos para Programar Recogida',
+        buttonDesktop: 'Llámanos al (323) 840-1696 para programar una recogida'
+      }
     }
   },
 

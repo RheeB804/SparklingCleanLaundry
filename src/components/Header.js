@@ -178,7 +178,6 @@ const Header = () => {
               {(language || 'en') === 'en' ? 'ES' : 'EN'}
             </button>
           </div>
-          <button className="cta-button">Get Quote</button>
           <button 
             className={`mobile-menu-toggle ${isMenuOpen ? 'active' : ''}`} 
             onClick={toggleMenu}

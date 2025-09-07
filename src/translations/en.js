@@ -33,6 +33,7 @@ export const en = {
   // Services
   services: {
     title: 'Our Services',
+    subtitle: 'Professional laundromat services tailored to your needs',
     specializedServices: 'Specialized Services',
     selfServe: {
       title: 'Self Serve Laundry',
@@ -44,13 +45,117 @@ export const en = {
       title: 'Fluff & Fold',
       description: 'Skip laundry day and let us do the work for you! Drop off your clothes and our team will wash, dry, and neatly fold them with care. Priced by the pound, it\'s the perfect way to save time and enjoy fresh, ready-to-wear laundry without the hassle.',
       price: 'Starts at $1.75 per pound',
-      button: 'Learn More'
+      button: 'Learn More',
+      pageTitle: 'Fluff & Fold Service',
+      pageSubtitle: 'Professional laundry service with next-day or same-day turnaround',
+      whatIs: 'What is Fluff & Fold?',
+      whatIsDescription: 'Our Fluff & Fold service takes the hassle out of laundry day. Simply drop off your clothes, and we\'ll wash, dry, and fold them to perfection. Perfect for busy professionals, families, and anyone who wants to save time.',
+      features: {
+        sameDay: {
+          title: 'Same-Day Service',
+          description: 'Drop off in the morning, pick up in the evening'
+        },
+        professional: {
+          title: 'Professional',
+          description: 'Expert handling of all fabric types and special items'
+        },
+        folded: {
+          title: 'Neatly Folded',
+          description: 'Your clothes returned perfectly folded and organized'
+        }
+      },
+      pricing: 'Pricing',
+      pricingItems: {
+        nextDay: {
+          title: 'Next-Day Service',
+          helper: 'Drop off today, ready tomorrow\n24h turnaround',
+          price: '$1.75/lb'
+        },
+        sameDay: {
+          title: 'Same-Day Service',
+          helper: 'Drop off before noon,\nready evening',
+          price: '$2.25/lb'
+        },
+        comforters: {
+          title: 'Comforters',
+          price: '$13.00 each'
+        }
+      },
+      howItWorks: 'How It Works',
+      steps: {
+        step1: {
+          title: 'Drop Off',
+          description: 'Bring your clothes to our location'
+        },
+        step2: {
+          title: 'We Wash & Fold',
+          description: 'Professional cleaning and folding'
+        },
+        step3: {
+          title: 'Pick Up',
+          description: 'Collect your fresh, folded laundry'
+        }
+      }
     },
     pickupDelivery: {
       title: 'Pickup & Delivery Laundry Service',
       description: 'Laundry made effortless. We\'ll come to your door, pick up your clothes, wash and fold them with care, then deliver them back fresh and neatly packed. Perfect for busy families, professionals, or businesses — all with simple scheduling and reliable service.',
       price: 'Starts at $2.25 per pound',
-      button: 'Book Now'
+      button: 'Book Now',
+      pageTitle: 'Pickup & Delivery Service',
+      pageSubtitle: 'Convenient laundry service right to your doorstep',
+      whatIs: 'Door-to-Door Laundry Service',
+      whatIsDescription: 'Skip the trip to the laundromat! Our pickup and delivery service brings the convenience of professional laundry care directly to your home or office. Schedule a pickup, and we\'ll handle the rest.',
+      features: {
+        pickup: {
+          title: 'Pickup & Delivery',
+          description: 'We pickup and deliver within our service area'
+        },
+        scheduling: {
+          title: 'Easy Scheduling',
+          description: 'Call us to schedule your pickup and delivery'
+        },
+        secure: {
+          title: 'Secure & Safe',
+          description: 'Your items are tracked and protected throughout the entire process'
+        }
+      },
+      pricing: 'Pricing',
+      pricingItems: {
+        twoDay: {
+          title: '2-Day Service',
+          price: '$2.50/lb'
+        },
+        comforters: {
+          title: 'Comforters',
+          price: '$18.00 each'
+        },
+        minimum: {
+          title: 'Minimum Pounds',
+          price: '10 lbs'
+        }
+      },
+      serviceAreas: 'Service Areas',
+      serviceAreasDescription: 'We proudly serve the following areas:',
+      areas: [
+        'Downtown Los Angeles',
+        'Hollywood',
+        'West Hollywood',
+        'Beverly Hills',
+        'Santa Monica',
+        'Venice',
+        'Culver City',
+        'West LA',
+        'Mid-Wilshire',
+        'Koreatown'
+      ],
+      cta: {
+        title: 'Ready to Get Started?',
+        description: 'Call us to schedule your pickup and delivery service today!',
+        button: 'Call us to Schedule Pickup',
+        buttonMobile: 'Call us to Schedule Pickup',
+        buttonDesktop: 'Call us at (323) 840-1696 to schedule a pickup'
+      }
     }
   },
 
