@@ -14,6 +14,9 @@ const Contact = () => {
     communication: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
 
   const handleChange = (e) => {
     setFormData({
@@ -25,33 +28,70 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-                // EmailJS configuration from environment variables with fallback
-                const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_eoeh9ih';
-                const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_ee6bopj';
-                const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'QJkLPhuVA-hGrOrJO';
-                
-                // Debug: Check if environment variables are loaded
-                console.log('Environment variables:', {
-                  serviceId,
-                  templateId,
-                  publicKey
-                });
-                
-                // Debug: Check if using environment variables or fallback
-                if (process.env.REACT_APP_EMAILJS_SERVICE_ID) {
-                  console.log('Using environment variables');
-                } else {
-                  console.log('Using fallback values');
-                }
+    // Prevent multiple submissions
+    if (isSubmitting || isSubmitted) {
+      return;
+    }
     
+    // Check cooldown period (5 seconds between submissions)
+    const now = Date.now();
+    if (now - lastSubmissionTime < 5000) {
+      alert('Please wait a moment before submitting again.');
+      return;
+    }
+    
+    // Set submission state
+    setIsSubmitting(true);
+    setLastSubmissionTime(now);
+    
+    // EmailJS configuration from environment variables with fallback
+    const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID || 'service_eoeh9ih';
+    const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'template_ee6bopj';
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'QJkLPhuVA-hGrOrJO';
+    
+    // Debug: Check if environment variables are loaded
+    console.log('Environment variables:', {
+      serviceId,
+      templateId,
+      publicKey
+    });
+    
+    // Debug: Check if using environment variables or fallback
+    if (process.env.REACT_APP_EMAILJS_SERVICE_ID) {
+      console.log('Using environment variables');
+    } else {
+      console.log('Using fallback values');
+    }
+
+    // Map service values to display names
+    const getServiceDisplayName = (serviceValue) => {
+      const serviceMap = {
+        'residential': t('contact.form.services.residential'),
+        'commercial': t('contact.form.services.commercial'),
+        'deep-cleaning': t('contact.form.services.deepCleaning')
+      };
+      return serviceMap[serviceValue] || serviceValue;
+    };
+
+    // Map communication values to display names
+    const getCommunicationDisplayName = (commValue) => {
+      const commMap = {
+        'phone': t('contact.form.communicationMethods.phone'),
+        'email': t('contact.form.communicationMethods.email'),
+        'text': t('contact.form.communicationMethods.text'),
+        'any': t('contact.form.communicationMethods.any')
+      };
+      return commMap[commValue] || commValue;
+    };
+
     // Send email using EmailJS
     emailjs.send(serviceId, templateId, {
       to_name: 'Bryan',
       from_name: formData.name,
       from_email: formData.email,
       phone: formData.phone,
-      service: formData.service,
-      communication: formData.communication,
+      service: getServiceDisplayName(formData.service),
+      communication: getCommunicationDisplayName(formData.communication),
       message: formData.message,
       reply_to: formData.email
     }, publicKey)
@@ -62,7 +102,9 @@ const Contact = () => {
       // Track successful form submission
       trackContactFormSubmit('contact_form');
       
-      // Reset form
+      // Mark as submitted and reset form
+      setIsSubmitted(true);
+      setIsSubmitting(false);
       setFormData({
         name: '',
         email: '',
@@ -71,6 +113,11 @@ const Contact = () => {
         communication: '',
         message: ''
       });
+      
+      // Reset submitted state after 10 seconds to allow new submissions
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 10000);
     })
     .catch((error) => {
       console.error('EmailJS Error Details:', error);
@@ -90,6 +137,9 @@ const Contact = () => {
       }
       
       alert(errorMessage);
+      
+      // Reset submission state on error
+      setIsSubmitting(false);
     });
   };
 
@@ -199,8 +249,21 @@ const Contact = () => {
                   rows="4"
                 ></textarea>
               </div>
-              <button type="submit" className="submit-button">
-                {t('contact.form.submit')}
+              <button 
+                type="submit" 
+                className="submit-button"
+                disabled={isSubmitting || isSubmitted}
+              >
+                {isSubmitting ? (
+                  <>
+                    <span className="loading-spinner"></span>
+                    Sending...
+                  </>
+                ) : isSubmitted ? (
+                  'Message Sent!'
+                ) : (
+                  t('contact.form.submit')
+                )}
               </button>
             </form>
           </div>
