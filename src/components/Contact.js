@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from '../hooks/useTranslation';
+import { trackPhoneCall, trackEmailClick, trackLocationClick, trackContactFormSubmit } from '../utils/analytics';
 import './Contact.css';
 
 const Contact = () => {
@@ -57,6 +58,10 @@ const Contact = () => {
     .then((result) => {
       console.log('Email sent successfully:', result.text);
       alert('Thank you for your message! We\'ll get back to you soon.');
+      
+      // Track successful form submission
+      trackContactFormSubmit('contact_form');
+      
       // Reset form
       setFormData({
         name: '',
@@ -95,28 +100,28 @@ const Contact = () => {
         <div className="contact-content">
           <div className="contact-info">
             <h3>{t('contact.contactInfo')}</h3>
-            <a href="tel:+13238401696" className="contact-item">
-              <span className="contact-icon">📞</span>
-              <div>
-                <h4>{t('contact.phone')}</h4>
-                <p>(323) 840-1696</p>
-              </div>
-            </a>
-            <a href="mailto:info@thesparklingcleanlaundry.com" className="contact-item">
+        <a href="tel:+13238401696" className="contact-item" onClick={() => trackPhoneCall('(323) 840-1696')}>
+          <span className="contact-icon">📞</span>
+          <div>
+            <h4>{t('contact.phone')}</h4>
+            <p>(323) 840-1696</p>
+          </div>
+        </a>
+            <a href="mailto:info@thesparklingcleanlaundry.com" className="contact-item" onClick={() => trackEmailClick('info@thesparklingcleanlaundry.com')}>
               <span className="contact-icon">✉️</span>
               <div>
                 <h4>{t('contact.email')}</h4>
                 <p>info@thesparklingcleanlaundry.com</p>
               </div>
             </a>
-            <a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" className="contact-item">
+            <a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" className="contact-item" onClick={() => trackLocationClick('5127 Whittier Blvd, East Los Angeles, CA 90022')}>
               <span className="contact-icon">📍</span>
               <div>
                 <h4>{t('contact.location')}</h4>
                 <p>5127 Whittier Blvd, East Los Angeles, CA 90022</p>
               </div>
             </a>
-            <a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" className="contact-item">
+            <a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" className="contact-item" onClick={() => trackLocationClick('Business Hours - Google Maps')}>
               <span className="contact-icon">🕒</span>
               <div>
                 <h4>{t('contact.hours')}</h4>

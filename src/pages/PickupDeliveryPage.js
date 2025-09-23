@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './PickupDeliveryPage.css';
 import { useTranslation } from '../hooks/useTranslation';
+import { trackButtonClick, trackPhoneCall } from '../utils/analytics';
 
 const PickupDeliveryPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,8 +25,8 @@ const PickupDeliveryPage = () => {
           <h1>{t('services.pickupDelivery.pageTitle')}</h1>
           <p>{t('services.pickupDelivery.pageSubtitle')}</p>
           <div className="page-header-actions">
-            <a href="tel:+13238401696" className="primary-button">{t('services.pickupDelivery.cta.button')}</a>
-            <a href="/contact" className="secondary-button">{t('services.pickupDelivery.cta.getQuote')}</a>
+            <a href="tel:+13238401696" className="primary-button" onClick={() => trackPhoneCall('(323) 840-1696')}>{t('services.pickupDelivery.cta.button')}</a>
+            <a href="/contact" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery Header')}>{t('services.pickupDelivery.cta.getQuote')}</a>
           </div>
         </div>
       </div>
@@ -126,8 +127,8 @@ const PickupDeliveryPage = () => {
             <h2>{t('services.pickupDelivery.cta.title')}</h2>
             <p>{t('services.pickupDelivery.cta.description')}</p>
             <div className="contact-buttons">
-              <a href="tel:+13238401696" className="primary-button">{t('services.pickupDelivery.cta.button')}</a>
-              <a href="/contact" className="secondary-button">{t('services.pickupDelivery.cta.getQuote')}</a>
+              <a href="tel:+13238401696" className="primary-button" onClick={() => trackPhoneCall('(323) 840-1696')}>{t('services.pickupDelivery.cta.button')}</a>
+              <a href="/contact" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery CTA')}>{t('services.pickupDelivery.cta.getQuote')}</a>
             </div>
           </div>
         </div>

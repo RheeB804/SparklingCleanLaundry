@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from '../hooks/useTranslation';
+import { trackPhoneCall, trackEmailClick, trackLocationClick } from '../utils/analytics';
 import './Footer.css';
 
 const Footer = () => {
@@ -69,10 +70,10 @@ const Footer = () => {
           <div className="footer-section footer-contact-info">
             <h4>{t('footer.contactInfo')}</h4>
             <div className="footer-contact">
-              <p><a href="tel:+13238401696">📞 (323) 840-1696</a></p>
-              <p><a href="mailto:info@thesparklingcleanlaundry.com">✉️ info@thesparklingcleanlaundry.com</a></p>
-              <p><a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer">📍 5127 Whittier Blvd, East Los Angeles, CA 90022</a></p>
-              <p><a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer">🕒 Mon-Thurs: 6AM-12AM | Fri-Sun: 5AM-1AM</a></p>
+              <p><a href="tel:+13238401696" onClick={() => trackPhoneCall('(323) 840-1696')}>📞 (323) 840-1696</a></p>
+              <p><a href="mailto:info@thesparklingcleanlaundry.com" onClick={() => trackEmailClick('info@thesparklingcleanlaundry.com')}>✉️ info@thesparklingcleanlaundry.com</a></p>
+              <p><a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" onClick={() => trackLocationClick('5127 Whittier Blvd, East Los Angeles, CA 90022')}>📍 5127 Whittier Blvd, East Los Angeles, CA 90022</a></p>
+              <p><a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" onClick={() => trackLocationClick('Business Hours - Google Maps')}>🕒 Mon-Thurs: 6AM-12AM | Fri-Sun: 5AM-1AM</a></p>
             </div>
           </div>
         </div>
