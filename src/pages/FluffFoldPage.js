@@ -11,6 +11,10 @@ const FluffFoldPage = () => {
         <div className="container">
           <h1>{t('services.fluffFold.pageTitle')}</h1>
           <p>{t('services.fluffFold.pageSubtitle')}</p>
+          <div className="page-header-actions">
+            <a href="tel:+13238401696" className="primary-button">{t('services.fluffFold.cta.button')}</a>
+            <a href="/contact" className="secondary-button">{t('services.fluffFold.cta.getQuote')}</a>
+          </div>
         </div>
       </div>
 

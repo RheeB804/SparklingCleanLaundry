@@ -1,0 +1,10 @@
+[33m43fb782[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add comprehensive translation support and UI improvements
+[33m190bee2[m adjusted language compatibility, mobile css
+[33m653f096[m added pages under services tab
+[33m442c412[m Added env variables, adjusted content in footer and about.
+[33m68924d3[m favicon
+[33m40b3d67[m updated css, updated contact form/info, added more pages.
+[33mb128736[m Enhance UI: Add logo with business name, improve button contrast, remove feature circles, and optimize hero layout
+[33mca076e3[m Initial commit: Add sparkling-clean-react website with modern UI components and routing
+[33me1fbf85[m Fix Vercel deployment: Downgrade to Tailwind CSS v3.4.17
+[33m5414149[m Fix Vercel deployment: Update PostCSS configuration for Tailwind CSS

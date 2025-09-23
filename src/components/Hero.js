@@ -37,6 +37,16 @@ const Hero = () => {
             <span className="feature-icon">🚀</span>
             <span>{t('hero.features.sameDay')}</span>
           </div>
+          <div className="feature feature-mobile-combined">
+            <div className="feature-icons">
+              <span className="feature-icon">🧹</span>
+              <span className="feature-icon">⭐</span>
+              <span className="feature-icon">🚀</span>
+            </div>
+            <div className="feature-text">
+              <span>{t('hero.features.professional')} • {t('hero.features.rated')} • {t('hero.features.sameDay')}</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

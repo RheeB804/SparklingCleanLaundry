@@ -91,42 +91,38 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="contact-container">
-        <div className="section-header">
-          <h2>{t('contact.title')}</h2>
-          <p>{t('contact.subtitle')}</p>
-        </div>
         
         <div className="contact-content">
           <div className="contact-info">
             <h3>{t('contact.contactInfo')}</h3>
-            <div className="contact-item">
+            <a href="tel:+13238401696" className="contact-item">
               <span className="contact-icon">📞</span>
               <div>
                 <h4>{t('contact.phone')}</h4>
                 <p>(323) 840-1696</p>
               </div>
-            </div>
-            <div className="contact-item">
+            </a>
+            <a href="mailto:info@thesparklingcleanlaundry.com" className="contact-item">
               <span className="contact-icon">✉️</span>
               <div>
                 <h4>{t('contact.email')}</h4>
                 <p>info@thesparklingcleanlaundry.com</p>
               </div>
-            </div>
-            <div className="contact-item">
+            </a>
+            <a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" className="contact-item">
               <span className="contact-icon">📍</span>
               <div>
                 <h4>{t('contact.location')}</h4>
                 <p>5127 Whittier Blvd, East Los Angeles, CA 90022</p>
               </div>
-            </div>
-            <div className="contact-item">
+            </a>
+            <a href="https://maps.app.goo.gl/4ksBygX3r4TxgFX98" target="_blank" rel="noopener noreferrer" className="contact-item">
               <span className="contact-icon">🕒</span>
               <div>
                 <h4>{t('contact.hours')}</h4>
                 <p>{t('contact.hoursDetails.weekdays')}<br/>{t('contact.hoursDetails.friday')}<br/>{t('contact.hoursDetails.weekend')}</p>
               </div>
-            </div>
+            </a>
           </div>
           
           <div className="contact-form">

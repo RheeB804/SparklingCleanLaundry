@@ -23,6 +23,10 @@ const PickupDeliveryPage = () => {
         <div className="container">
           <h1>{t('services.pickupDelivery.pageTitle')}</h1>
           <p>{t('services.pickupDelivery.pageSubtitle')}</p>
+          <div className="page-header-actions">
+            <a href="tel:+13238401696" className="primary-button">{t('services.pickupDelivery.cta.button')}</a>
+            <a href="/contact" className="secondary-button">{t('services.pickupDelivery.cta.getQuote')}</a>
+          </div>
         </div>
       </div>
 
@@ -123,6 +127,7 @@ const PickupDeliveryPage = () => {
             <p>{t('services.pickupDelivery.cta.description')}</p>
             <div className="contact-buttons">
               <a href="tel:+13238401696" className="primary-button">{t('services.pickupDelivery.cta.button')}</a>
+              <a href="/contact" className="secondary-button">{t('services.pickupDelivery.cta.getQuote')}</a>
             </div>
           </div>
         </div>

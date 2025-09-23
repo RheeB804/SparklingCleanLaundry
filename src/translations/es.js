@@ -37,7 +37,7 @@ export const es = {
     specializedServices: 'Servicios Especializados',
     selfServe: {
       title: 'Lavandería de Autoservicio',
-      description: 'Nuestras lavadoras y secadoras modernas hacen que la lavandería sea rápida, fácil y económica. Ya sea que estés manejando una carga pequeña o enfrentando una semana de ropa, disfruta de un espacio limpio, seguro y cómodo con muchas máquinas listas cuando las necesites. Abierto diariamente con horarios convenientes, nuestra opción de autoservicio te da control total sobre tu rutina de lavandería.',
+      description: 'Nuestras 40+ lavadoras y secadoras modernas hacen que la lavandería sea rápida, fácil y económica. Desde máquinas de 90 lb hasta 30 lb, tenemos todos los tamaños para llevar tu lavandería al siguiente nivel. Disfruta de un espacio limpio, seguro y cómodo con muchas máquinas listas cuando las necesites. Abierto diariamente con horarios convenientes, nuestra opción de autoservicio te da control total sobre tu rutina de lavandería.',
       price: 'Comienza en $4 por carga',
       button: 'Ver Ubicación'
     },
@@ -138,23 +138,18 @@ export const es = {
       serviceAreas: 'Áreas de Servicio',
       serviceAreasDescription: 'Servimos con orgullo las siguientes áreas:',
       areas: [
-        'Centro de Los Ángeles',
+        'Downtown Los Angeles',
         'Hollywood',
-        'West Hollywood',
-        'Beverly Hills',
-        'Santa Mónica',
-        'Venice',
-        'Culver City',
-        'West LA',
-        'Mid-Wilshire',
-        'Koreatown'
+        'Koreatown',
+        'East Los Angeles'
       ],
       cta: {
         title: '¿Listo para Comenzar?',
         description: '¡Llámanos para programar tu servicio de recogida y entrega hoy!',
         button: 'Llámanos para Programar Recogida',
         buttonMobile: 'Llámanos para Programar Recogida',
-        buttonDesktop: 'Llámanos al (323) 840-1696 para programar una recogida'
+        buttonDesktop: 'Llámanos al (323) 840-1696 para programar una recogida',
+        getQuote: 'Obtener Cotización'
       }
     }
   },
@@ -165,6 +160,7 @@ export const es = {
     lead: 'Estamos apasionados por crear ambientes limpios y saludables para nuestros clientes.',
     description1: 'Fundada con una misión simple de proporcionar servicios de lavandería excepcionales, Sparkling Clean Laundry ha estado sirviendo a nuestra comunidad con dedicación y atención al detalle.',
     description2: 'Nuestro equipo de profesionales usa técnicas probadas para asegurar que tu ropa no solo se vea limpia sino que se sienta fresca y saludable.',
+    description3: 'Disfruta de un espacio limpio, seguro y cómodo con muchas máquinas.',
     stats: {
       clients: 'Clientes Felices',
       rating: 'Calificación Estrella',

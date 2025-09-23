@@ -26,7 +26,7 @@
 
 .about-lead {
   font-size: 1.3rem;
-  color: #667eea;
+  color: #3b82f6;
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -53,7 +53,7 @@
   display: block;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #667eea;
+  color: #3b82f6;
   margin-bottom: 5px;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .image-placeholder {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   width: 300px;
   height: 300px;
   border-radius: 20px;

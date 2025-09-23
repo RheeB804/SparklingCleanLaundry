@@ -10,15 +10,14 @@ const About = () => {
       <div className="about-container">
         <div className="about-content">
           <div className="about-text">
-            <h2>{t('about.title')}</h2>
-            <p className="about-lead">
-              {t('about.lead')}
-            </p>
             <p>
               {t('about.description1')}
             </p>
             <p>
               {t('about.description2')}
+            </p>
+            <p>
+              {t('about.description3')}
             </p>
             
             <div className="about-stats">

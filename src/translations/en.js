@@ -37,7 +37,7 @@ export const en = {
     specializedServices: 'Specialized Services',
     selfServe: {
       title: 'Self Serve Laundry',
-      description: 'Our modern washers and dryers make laundry quick, easy, and affordable. Whether you\'re handling a small load or tackling a week\'s worth of clothes, enjoy a clean, safe, and comfortable space with plenty of machines ready when you are. Open daily with convenient hours, our self-serve option gives you full control over your laundry routine.',
+      description: 'Our 40+ modern washers and dryers make laundry quick, easy, and affordable. From 90 lb machines to 30 lb, we have all sizes for taking you\'re laundry to the next level. Enjoy a clean, safe, and comfortable space with plenty of machines ready when you are. Open daily with convenient hours, our self-serve option gives you full control over your laundry routine.',
       price: 'Starts at $4 per load',
       button: 'View Location'
     },
@@ -140,23 +140,18 @@ export const en = {
       areas: [
         'Downtown Los Angeles',
         'Hollywood',
-        'West Hollywood',
-        'Beverly Hills',
-        'Santa Monica',
-        'Venice',
-        'Culver City',
-        'West LA',
-        'Mid-Wilshire',
-        'Koreatown'
+        'Koreatown',
+        'East Los Angeles'
       ],
       cta: {
         title: 'Ready to Get Started?',
         description: 'Call us to schedule your pickup and delivery service today!',
         button: 'Call us to Schedule Pickup',
         buttonMobile: 'Call us to Schedule Pickup',
-        buttonDesktop: 'Call us at (323) 840-1696 to schedule a pickup'
+        buttonDesktop: 'Call us at (323) 840-1696 to schedule a pickup',
+        getQuote: 'Get a Quote'
       }
-    }
+    },
   },
 
   // About Section
@@ -165,6 +160,7 @@ export const en = {
     lead: 'We\'re passionate about creating clean, healthy environments for our clients.',
     description1: 'Founded with a simple mission to provide exceptional laundry services, Sparkling Clean Laundry has been serving our community with dedication and attention to detail.',
     description2: 'Our team of professionals uses proven techniques to ensure your clothes not only looks clean but feels fresh and healthy.',
+    description3: 'Enjoy a clean, safe, and comfortable space with plenty of machines.',
     stats: {
       clients: 'Happy Clients',
       rating: 'Star Rating',
