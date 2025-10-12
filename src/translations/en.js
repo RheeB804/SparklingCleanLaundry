@@ -95,6 +95,10 @@ export const en = {
           title: 'Pick Up',
           description: 'Collect your fresh, folded laundry'
         }
+      },
+      cta: {
+        button: 'Call Now',
+        getQuote: 'Get Quote'
       }
     },
     pickupDelivery: {
@@ -230,6 +234,34 @@ export const en = {
     legal: {
       privacy: 'Privacy Policy',
       terms: 'Terms of Service'
+    }
+  },
+
+  // Landing Page
+  landing: {
+    title: 'Get Up to 15% Off Your First Order!',
+    subtitle: 'Professional laundry service that saves you time and money',
+    discount: 'Up to 15% Off',
+    discountDescription: 'New customers get up to 15% off their first order',
+    bookNow: 'Book Now',
+    callNow: 'Call Now',
+    learnMore: 'Learn More',
+    form: {
+      title: 'Get Your Discount',
+      name: 'Your Name',
+      phone: 'Phone Number',
+      email: 'Email Address',
+      service: 'Service Needed',
+      submit: 'Get My Discount',
+      services: {
+        fluffFold: 'Fluff & Fold',
+        pickupDelivery: 'Pickup & Delivery'
+      }
+    },
+    features: {
+      professional: 'Professional Service',
+      fast: 'Fast Turnaround',
+      quality: 'Quality Guaranteed'
     }
   }
 };

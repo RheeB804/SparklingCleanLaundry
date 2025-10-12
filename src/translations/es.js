@@ -95,6 +95,10 @@ export const es = {
           title: 'Recoge',
           description: 'Recoge tu ropa fresca y doblada'
         }
+      },
+      cta: {
+        button: 'Llamar Ahora',
+        getQuote: 'Obtener Cotización'
       }
     },
     pickupDelivery: {
@@ -230,6 +234,34 @@ export const es = {
     legal: {
       privacy: 'Política de Privacidad',
       terms: 'Términos de Servicio'
+    }
+  },
+
+  // Landing Page
+  landing: {
+    title: '¡Obtén hasta 15% de descuento en tu primer pedido!',
+    subtitle: 'Servicio de lavandería profesional que te ahorra tiempo y dinero',
+    discount: 'Hasta 15% de Descuento',
+    discountDescription: 'Los nuevos clientes obtienen hasta 15% de descuento en su primer pedido',
+    bookNow: 'Reservar Ahora',
+    callNow: 'Llamar Ahora',
+    learnMore: 'Saber Más',
+    form: {
+      title: 'Obtén tu Descuento',
+      name: 'Tu Nombre',
+      phone: 'Número de Teléfono',
+      email: 'Dirección de Correo',
+      service: 'Servicio Necesario',
+      submit: 'Obtener mi Descuento',
+      services: {
+        fluffFold: 'Lavado y Doblado',
+        pickupDelivery: 'Recogida y Entrega'
+      }
+    },
+    features: {
+      professional: 'Servicio Profesional',
+      fast: 'Entrega Rápida',
+      quality: 'Calidad Garantizada'
     }
   }
 };
