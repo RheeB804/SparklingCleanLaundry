@@ -1,6 +1,7 @@
 import React from 'react';
 import './FluffFoldPage.css';
 import { useTranslation } from '../hooks/useTranslation';
+import SEO from '../components/SEO';
 
 const FluffFoldPage = () => {
   const { t } = useTranslation();
@@ -20,14 +21,66 @@ const FluffFoldPage = () => {
   };
 
   return (
-    <div className="page-container">
+    <>
+      <SEO
+        title={`${t('services.fluffFold.pageTitle')} - Sparkling Clean Laundry`}
+        description={t('services.fluffFold.pageSubtitle')}
+        keywords="fluff and fold, drop off laundry, wash and fold service, East Los Angeles, professional laundry, same day service"
+        canonical="/flufffold"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": t('services.fluffFold.pageTitle'),
+          "description": t('services.fluffFold.pageSubtitle'),
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Sparkling Clean Laundry",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5127 Whittier Blvd",
+              "addressLocality": "East Los Angeles",
+              "addressRegion": "CA",
+              "postalCode": "90022",
+              "addressCountry": "US"
+            },
+            "telephone": "(323) 840-1696"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "East Los Angeles"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Fluff & Fold Laundry Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Fluff & Fold Service",
+                  "description": "Drop-off laundry service with washing, drying, and folding"
+                },
+                "price": "1.75",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "1.75",
+                  "priceCurrency": "USD",
+                  "unitText": "per pound"
+                }
+              }
+            ]
+          }
+        }}
+      />
+      <div className="page-container flufffold-page">
       <div className="page-header">
         <div className="container">
           <h1>{t('services.fluffFold.pageTitle')}</h1>
           <p>{t('services.fluffFold.pageSubtitle')}</p>
           <div className="page-header-actions">
             <a href="tel:+13238401696" className="primary-button">{t('services.fluffFold.cta.button')}</a>
-            <a href="/contact" className="secondary-button">{t('services.fluffFold.cta.getQuote')}</a>
+            <a href="/contact?service=deep-cleaning" className="secondary-button">{t('services.fluffFold.cta.getQuote')}</a>
             <button onClick={scrollToPricing} className="pricing-button">{t('services.fluffFold.cta.pricing')}</button>
           </div>
         </div>
@@ -96,7 +149,7 @@ const FluffFoldPage = () => {
                 </div>
               </div>
               
-              <button className="cta-button">Get Started</button>
+              <a href="/contact?service=deep-cleaning" className="cta-button">Get Started</a>
             </div>
           </div>
 
@@ -123,6 +176,7 @@ const FluffFoldPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

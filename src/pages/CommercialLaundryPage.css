@@ -1,0 +1,560 @@
+/* Commercial Laundry Page Styles */
+.commercial-page.page-container {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.commercial-page .page-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.commercial-page .page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-header p {
+  font-size: 1.3rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.page-header-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.page-header-actions .primary-button,
+.page-header-actions .secondary-button,
+.pricing-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.page-header-actions .primary-button {
+  background: white;
+  color: #3b82f6;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.page-header-actions .primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+.page-header-actions .secondary-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.page-header-actions .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.pricing-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.pricing-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.commercial-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Service Details Section */
+.commercial-page .service-details {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.commercial-page .service-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+.service-content h2 {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.service-content p {
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.service-features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.commercial-page .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 25px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.commercial-page .feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.commercial-page .feature-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 50%;
+  margin-top: 5px;
+}
+
+.commercial-page .feature-item h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.commercial-page .feature-item p {
+  color: #718096;
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.commercial-page .feature-item > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Service Pricing */
+.service-pricing {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.service-pricing h3 {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.commercial-page .pricing-card {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid #e2e8f0;
+  gap: 20px;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.item {
+  color: #4a5568;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.item-helper {
+  color: #718096;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3b82f6;
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.commercial-page .cta-button {
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.commercial-page .cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 80px 0;
+  background: white;
+}
+
+.how-it-works h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.commercial-page .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.commercial-page .step-item {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f8f9fa;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.commercial-page .step-item:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin: 0 auto 20px auto;
+}
+
+.commercial-page .step-item h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.commercial-page .step-item p {
+  color: #718096;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+/* Commercial Benefits Section */
+.commercial-benefits {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.commercial-benefits h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.commercial-page .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: #718096;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.commercial-page .cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.commercial-page .cta-buttons .primary-button,
+.commercial-page .cta-buttons .secondary-button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.commercial-page .cta-buttons .primary-button {
+  background: white;
+  color: #3b82f6;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.commercial-page .cta-buttons .primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+}
+
+.commercial-page .cta-buttons .secondary-button {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.commercial-page .cta-buttons .secondary-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 100px 0 60px;
+  }
+  
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .page-header p {
+    font-size: 1.1rem;
+  }
+
+  .page-header-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .page-header-actions .primary-button,
+  .page-header-actions .secondary-button,
+  .pricing-button {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .commercial-page .service-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .service-content h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .service-content p {
+    text-align: center;
+  }
+  
+  .commercial-page .feature-item {
+    text-align: center;
+  }
+  
+  .commercial-page .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .commercial-page .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .primary-button,
+  .cta-buttons .secondary-button {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .commercial-page .service-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .service-content h2 {
+    font-size: 2rem;
+  }
+  
+  .commercial-page .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .commercial-page .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1024px) {
+  .commercial-page .service-grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+  }
+  
+  .commercial-page .steps-grid {
+    gap: 50px;
+  }
+  
+  .commercial-page .benefits-grid {
+    gap: 40px;
+  }
+}

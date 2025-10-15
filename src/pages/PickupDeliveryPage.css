@@ -1,38 +1,50 @@
 /* Page container styles */
-.page-container {
+.pickup-page.page-container {
   min-height: calc(100vh - 80px);
   padding-top: 80px;
 }
 
-.page-header {
+.pickup-page .page-header {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
   padding: 80px 0 60px;
   text-align: center;
+  position: relative;
 }
 
-.page-header h1 {
+.pickup-page .page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.pickup-page .page-header h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-.page-header p {
+.pickup-page .page-header p {
   font-size: 1.2rem;
   margin: 0 auto 30px auto;
   max-width: 600px;
   opacity: 0.9;
 }
 
-.page-header-actions {
+.pickup-page .page-header-actions {
   display: flex;
   gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.page-header-actions .primary-button,
-.page-header-actions .secondary-button {
+.pickup-page .page-header-actions .primary-button,
+.pickup-page .page-header-actions .secondary-button {
   padding: 12px 25px;
   font-size: 1rem;
   text-decoration: none;
@@ -41,30 +53,30 @@
   display: inline-block;
 }
 
-.page-header-actions .primary-button {
+.pickup-page .page-header-actions .primary-button {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
-.page-header-actions .primary-button:hover {
+.pickup-page .page-header-actions .primary-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
-.page-header-actions .secondary-button {
+.pickup-page .page-header-actions .secondary-button {
   background: rgba(255, 255, 255, 0.2);
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-.page-header-actions .secondary-button:hover {
+.pickup-page .page-header-actions .pickup-page .secondary-button:hover {
   background: white;
   color: #3b82f6;
   transform: translateY(-2px);
 }
 
-.pricing-button {
+.pickup-page .pricing-button {
   background: rgba(255, 255, 255, 0.15);
   color: white;
   border: 2px solid rgba(255, 255, 255, 0.4);
@@ -76,51 +88,51 @@
   font-weight: 600;
 }
 
-.pricing-button:hover {
+.pickup-page .pricing-button:hover {
   background: rgba(255, 255, 255, 0.25);
   border-color: rgba(255, 255, 255, 0.6);
   transform: translateY(-2px);
 }
 
-.container {
+.pickup-page .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.service-details {
+.pickup-page .service-details {
   padding: 80px 0;
   background: #f8f9fa;
 }
 
-.service-grid {
+.pickup-page .service-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 60px;
   margin-bottom: 80px;
 }
 
-.service-content h2 {
+.pickup-page .service-content h2 {
   font-size: 2.5rem;
   color: #2d3748;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.service-content p {
+.pickup-page .service-content p {
   font-size: 1.1rem;
   color: #4a5568;
   line-height: 1.7;
   margin-bottom: 40px;
 }
 
-.service-features {
+.pickup-page .service-features {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.feature-item {
+.pickup-page .feature-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -131,29 +143,29 @@
   transition: transform 0.3s ease;
 }
 
-.feature-item:hover {
+.pickup-page .feature-item:hover {
   transform: translateY(-5px);
 }
 
-.feature-icon {
+.pickup-page .feature-icon {
   font-size: 2.5rem;
   flex-shrink: 0;
 }
 
-.feature-item h3 {
+.pickup-page .feature-item h3 {
   font-size: 1.3rem;
   color: #2d3748;
   margin-bottom: 8px;
   font-weight: 600;
 }
 
-.feature-item p {
+.pickup-page .feature-item p {
   color: #718096;
   margin: 0;
   font-size: 1rem;
 }
 
-.service-pricing {
+.pickup-page .service-pricing {
   background: white;
   padding: 40px;
   border-radius: 20px;
@@ -163,7 +175,7 @@
   top: 100px;
 }
 
-.service-pricing h3 {
+.pickup-page .service-pricing h3 {
   font-size: 1.8rem;
   color: #2d3748;
   margin-bottom: 30px;
@@ -171,11 +183,11 @@
   font-weight: 700;
 }
 
-.pricing-card {
+.pickup-page .pricing-card {
   margin-bottom: 30px;
 }
 
-.price-item {
+.pickup-page .price-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,11 +195,11 @@
   border-bottom: 1px solid #e2e8f0;
 }
 
-.price-item:last-child {
+.pickup-page .price-item:last-child {
   border-bottom: none;
 }
 
-.price-item.highlight {
+.pickup-page .price-item.highlight {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
   border-radius: 10px;
   padding: 15px;
@@ -195,18 +207,18 @@
   font-weight: 600;
 }
 
-.item {
+.pickup-page .item {
   color: #4a5568;
   font-size: 1rem;
 }
 
-.price {
+.pickup-page .price {
   color: #3b82f6;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
-.cta-button {
+.pickup-page .cta-button {
   width: 100%;
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
@@ -223,20 +235,20 @@
   text-align: center;
 }
 
-.cta-button:hover {
+.pickup-page .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
 
-.service-areas {
+.pickup-page .service-areas {
   background: white;
   padding: 80px 40px;
   border-radius: 20px;
   margin-bottom: 40px;
 }
 
-.service-areas h2 {
+.pickup-page .service-areas h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #2d3748;
@@ -244,7 +256,7 @@
   font-weight: 700;
 }
 
-.service-areas p {
+.pickup-page .service-areas p {
   text-align: center;
   font-size: 1.1rem;
   color: #718096;
@@ -253,13 +265,15 @@
   max-width: 600px;
 }
 
-.areas-grid {
+.pickup-page .areas-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.area-card {
+.pickup-page .area-card {
   text-align: center;
   padding: 50px 40px;
   background: #f8f9fa;
@@ -267,33 +281,33 @@
   transition: transform 0.3s ease;
 }
 
-.area-card:hover {
+.pickup-page .area-card:hover {
   transform: translateY(-5px);
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.area-card h3 {
+.pickup-page .area-card h3 {
   font-size: 1.5rem;
   color: #2d3748;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
-.area-card p {
+.pickup-page .area-card p {
   color: #718096;
   line-height: 1.6;
   margin: 0;
 }
 
-.process-steps {
+.pickup-page .process-steps {
   background: white;
   padding: 80px 0;
   border-radius: 20px;
   margin-bottom: 40px;
 }
 
-.process-steps h2 {
+.pickup-page .process-steps h2 {
   text-align: center;
   font-size: 2.5rem;
   color: #2d3748;
@@ -301,13 +315,13 @@
   font-weight: 700;
 }
 
-.steps-grid {
+.pickup-page .steps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
 }
 
-.step {
+.pickup-page .step {
   text-align: center;
   padding: 30px 20px;
   background: #f8f9fa;
@@ -315,13 +329,13 @@
   transition: transform 0.3s ease;
 }
 
-.step:hover {
+.pickup-page .step:hover {
   transform: translateY(-5px);
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.step-number {
+.pickup-page .step-number {
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
@@ -335,20 +349,20 @@
   margin: 0 auto 20px;
 }
 
-.step h3 {
+.pickup-page .step h3 {
   font-size: 1.3rem;
   color: #2d3748;
   margin-bottom: 15px;
   font-weight: 600;
 }
 
-.step p {
+.pickup-page .step p {
   color: #718096;
   line-height: 1.6;
   margin: 0;
 }
 
-.contact-info {
+.pickup-page .contact-info {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
   padding: 80px 0;
@@ -356,26 +370,26 @@
   text-align: center;
 }
 
-.contact-info h2 {
+.pickup-page .contact-info h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.contact-info p {
+.pickup-page .contact-info p {
   font-size: 1.2rem;
   margin-bottom: 40px;
   opacity: 0.9;
 }
 
-.contact-buttons {
+.pickup-page .contact-buttons {
   display: flex;
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.primary-button {
+.pickup-page .primary-button {
   background: white;
   color: #3b82f6;
   border: none;
@@ -391,12 +405,12 @@
   text-align: center;
 }
 
-.primary-button:hover {
+.pickup-page .primary-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.secondary-button {
+.pickup-page .secondary-button {
   background: transparent;
   color: white;
   border: 2px solid white;
@@ -408,7 +422,7 @@
   transition: all 0.3s ease;
 }
 
-.secondary-button:hover {
+.pickup-page .secondary-button:hover {
   background: white;
   color: #3b82f6;
   transform: translateY(-2px);
@@ -416,68 +430,68 @@
 
 /* Mobile responsive */
 @media (max-width: 768px) {
-  .service-grid {
+  .pickup-page .service-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .service-pricing {
+  .pickup-page .service-pricing {
     position: static;
   }
 
-  .service-content h2,
-  .service-areas h2,
-  .process-steps h2,
-  .contact-info h2 {
+  .pickup-page .service-content h2,
+  .pickup-page .service-areas h2,
+  .pickup-page .process-steps h2,
+  .pickup-page .contact-info h2 {
     font-size: 2rem;
   }
 
-  .service-areas p {
+  .pickup-page .service-areas p {
     font-size: 1rem;
     margin-bottom: 40px;
   }
 
-  .steps-grid,
-  .areas-grid {
+  .pickup-page .steps-grid,
+  .pickup-page .areas-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
 
-  .service-areas {
+  .pickup-page .service-areas {
     padding: 60px 20px;
   }
 
-  .area-card {
+  .pickup-page .area-card {
     padding: 40px 25px;
   }
 
-  .feature-item {
+  .pickup-page .feature-item {
     padding: 20px;
   }
 
-  .contact-buttons {
+  .pickup-page .contact-buttons {
     flex-direction: column;
     align-items: center;
   }
 
-  .page-header-actions {
+  .pickup-page .page-header-actions {
     flex-direction: column;
     align-items: center;
     gap: 10px;
   }
 
-  .pricing-button {
+  .pickup-page .pricing-button {
     width: 100%;
     max-width: 200px;
   }
 
-  .primary-button,
-  .secondary-button {
+  .pickup-page .primary-button,
+  .pickup-page .secondary-button {
     width: 100%;
     max-width: 300px;
   }
 
-  .cta-button {
+  .pickup-page .cta-button {
     display: block !important;
     width: 100%;
     margin-top: 10px;
@@ -486,7 +500,7 @@
 
 /* Mobile Styles (480px and below) */
 @media (max-width: 480px) {
-  .pricing-button {
+  .pickup-page .pricing-button {
     width: 100%;
     max-width: 180px;
     font-size: 0.9rem;

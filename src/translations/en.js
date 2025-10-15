@@ -12,6 +12,7 @@ export const en = {
     contact: 'Contact',
     fluffFold: 'Fluff & Fold',
     pickupDelivery: 'Pickup & Delivery',
+    commercial: 'Commercial Laundry',
     allServices: 'All Services'
   },
 
@@ -158,6 +159,94 @@ export const en = {
         pricing: 'Pricing'
       }
     },
+    commercial: {
+      pageTitle: 'Commercial Laundry Services',
+      pageSubtitle: 'Reliable. Professional. Hassle-Free.',
+      whatIs: 'What We Offer',
+      whatIsDescription: 'At Sparkling Clean Laundry, we make it easy for local businesses to stay spotless and stress-free. Whether you manage a hotel, restaurant, gym, medical office, or AirBNB, our commercial laundry program delivers consistent quality, quick turnaround, and unbeatable reliability — all from a trusted East Los Angeles neighborhood laundromat.',
+      features: {
+        fullService: {
+          title: 'Full-Service Wash, Dry & Fold',
+          description: 'Your linens, towels, and uniforms are carefully sorted, washed with premium detergents, and folded to perfection — ready for immediate use or shelf storage.'
+        },
+        pickupDelivery: {
+          title: 'Flexible Pickup & Delivery',
+          description: 'Save time with scheduled weekly or bi-weekly pickups. We\'ll come to you, weigh your order, and return everything fresh, clean, and neatly packed.'
+        },
+        customPrograms: {
+          title: 'Custom Programs for Every Industry',
+          description: 'We service hotels, restaurants, spas, gyms, medical offices, AirBNBs, and cleaning companies. Need something not listed? We\'ll customize a plan for your business.'
+        }
+      },
+      pricing: 'Simple, Transparent Pricing',
+      pricingItems: {
+        standard: {
+          title: 'Standard Service',
+          helper: 'Includes pickup & delivery\n30 lb minimum',
+          price: '$1.25–$1.75/lb'
+        },
+        highVolume: {
+          title: 'High Volume (50+ lb weekly)',
+          helper: 'Discounted pricing available\nContact us for rates',
+          price: 'Custom rate'
+        },
+        rush: {
+          title: 'Rush / Same-Day Service',
+          helper: 'Must be scheduled before 12 PM\n30 lb minimum',
+          price: '+$0.25–$0.50/lb'
+        },
+        specialty: {
+          title: 'Specialty Items',
+          helper: 'Comforters, rugs, duvets, etc.',
+          price: 'Per-piece'
+        }
+      },
+      howItWorks: 'How It Works',
+      steps: {
+        step1: {
+          title: 'Contact Us',
+          description: 'Fill out the quick form below or call us to schedule a consultation.'
+        },
+        step2: {
+          title: 'We Pick Up',
+          description: 'Our team arrives at your business to weigh and collect your laundry.'
+        },
+        step3: {
+          title: 'We Wash & Fold',
+          description: 'Everything is professionally washed, sanitized, and neatly folded.'
+        },
+        step4: {
+          title: 'We Deliver',
+          description: 'Fresh laundry, right back to your door — on schedule, every time.'
+        }
+      },
+      benefits: {
+        title: 'Clean for You and the Planet',
+        ecoFriendly: {
+          title: 'Eco-Friendly Process',
+          description: 'We use high-efficiency washers, eco-friendly detergents, and optimized water systems to ensure top-quality results with minimal environmental impact.'
+        },
+        serviceAreas: {
+          title: 'Service Areas',
+          description: 'Proudly serving East Los Angeles, Whittier, Montebello, Pico Rivera, Commerce, and surrounding areas.'
+        },
+        localBusiness: {
+          title: 'Locally Owned & Family Operated',
+          description: 'Open 7 days a week with fast turnaround. Your business gets premium cleanliness — without waste.'
+        },
+        contactInfo: {
+          title: 'Get a Free Quote Today',
+          description: 'Ready to simplify your business laundry? Fill out the form below or call (323) 840-1696 to set up your first pickup.'
+        }
+      },
+      cta: {
+        title: 'Ready to Streamline Your Commercial Laundry?',
+        description: 'Let us handle your bulk laundry needs so you can focus on your business.',
+        button: 'Call Now',
+        getQuote: 'Get a Quote',
+        pricing: 'View Pricing'
+      }
+    }
   },
 
   // About Section
@@ -212,9 +301,9 @@ export const en = {
       message: 'Tell us about your cleaning needs...',
       submit: 'Send Message',
       services: {
-        residential: 'Self Serve Laundry',
-        commercial: 'Fluff & Fold',
-        deepCleaning: 'Pickup & Delivery Laundry Service'
+        commercial: 'Commercial Laundry Services',
+        deepCleaning: 'Fluff & Fold',
+        pickupDelivery: 'Pickup & Delivery Laundry Service'
       },
       communicationMethods: {
         phone: 'Phone Call',

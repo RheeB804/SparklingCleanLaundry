@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { useTranslation } from '../hooks/useTranslation';
 import { trackPhoneCall, trackEmailClick, trackLocationClick, trackContactFormSubmit } from '../utils/analytics';
@@ -17,6 +17,19 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [lastSubmissionTime, setLastSubmissionTime] = useState(0);
+
+  // Handle URL query parameters to prefill form
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    
+    if (serviceParam) {
+      setFormData(prevData => ({
+        ...prevData,
+        service: serviceParam
+      }));
+    }
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -221,9 +234,9 @@ const Contact = () => {
                   required
                 >
                   <option value="">{t('contact.form.service')}</option>
-                  <option value="residential">{t('contact.form.services.residential')}</option>
-                  <option value="commercial">{t('contact.form.services.commercial')}</option>
                   <option value="deep-cleaning">{t('contact.form.services.deepCleaning')}</option>
+                  <option value="pickup-delivery">{t('contact.form.services.pickupDelivery')}</option>
+                  <option value="commercial">{t('contact.form.services.commercial')}</option>
                 </select>
               </div>
               <div className="form-group">

@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTranslation } from '../hooks/useTranslation';
 import './NotFoundPage.css';
 
 const NotFoundPage = () => {
-  const { t } = useTranslation();
 
   return (
     <div className="not-found-page">

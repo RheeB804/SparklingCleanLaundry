@@ -33,7 +33,7 @@ const Services = () => {
       description: t('services.pickupDelivery.description'),
       price: t('services.pickupDelivery.price'),
       button: t('services.pickupDelivery.button'),
-      link: '/pickupdelivery'
+      link: '/contact?service=pickup-delivery'
     }
   ];
 

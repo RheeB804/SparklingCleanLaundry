@@ -132,6 +132,15 @@ const Header = () => {
                     {t('nav.pickupDelivery')}
                   </Link>
                 </li>
+                <li>
+                  <Link 
+                    to="/commercial" 
+                    className="nav-sublink" 
+                    onClick={closeMenu}
+                  >
+                    {t('nav.commercial')}
+                  </Link>
+                </li>
               </ul>
             </li>
             <li>

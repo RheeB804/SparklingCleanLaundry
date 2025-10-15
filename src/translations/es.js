@@ -12,6 +12,7 @@ export const es = {
     contact: 'Contacto',
     fluffFold: 'Lavado y Doblado',
     pickupDelivery: 'Recogida y Entrega',
+    commercial: 'Lavandería Comercial',
     allServices: 'Todos los Servicios'
   },
 
@@ -157,6 +158,94 @@ export const es = {
         getQuote: 'Obtener Cotización',
         pricing: 'Precios'
       }
+    },
+    commercial: {
+      pageTitle: 'Servicios de Lavandería Comercial',
+      pageSubtitle: 'Confiable. Profesional. Sin Complicaciones.',
+      whatIs: '¿Qué Ofrecemos?',
+      whatIsDescription: 'En Sparkling Clean Laundry, facilitamos que las empresas locales se mantengan impecables y sin estrés. Ya sea que administres un hotel, restaurante, gimnasio, consultorio médico o AirBNB, nuestro programa de lavandería comercial ofrece calidad consistente, entrega rápida y confiabilidad inigualable — todo desde una lavandería de confianza en el vecindario de East Los Angeles.',
+      features: {
+        fullService: {
+          title: 'Servicio Completo de Lavado, Secado y Doblado',
+          description: 'Tu ropa de cama, toallas y uniformes se clasifican cuidadosamente, se lavan con detergentes premium y se doblan a la perfección — listos para uso inmediato o almacenamiento en estante.'
+        },
+        pickupDelivery: {
+          title: 'Recogida y Entrega Flexible',
+          description: 'Ahorra tiempo con recogidas programadas semanales o quincenales. Vamos a ti, pesamos tu pedido y devolvemos todo fresco, limpio y empaquetado ordenadamente.'
+        },
+        customPrograms: {
+          title: 'Programas Personalizados para Cada Industria',
+          description: 'Servimos hoteles, restaurantes, spas, gimnasios, consultorios médicos, AirBNBs y empresas de limpieza. ¿Necesitas algo que no esté listado? Personalizaremos un plan para tu negocio.'
+        }
+      },
+      pricing: 'Precios Simples y Transparentes',
+      pricingItems: {
+        standard: {
+          title: 'Servicio Estándar',
+          helper: 'Incluye recogida y entrega\nMínimo 30 lb',
+          price: '$1.25–$1.75/lb'
+        },
+        highVolume: {
+          title: 'Alto Volumen (50+ lb semanales)',
+          helper: 'Precios con descuento disponibles\nContáctanos para tarifas',
+          price: 'Tarifa personalizada'
+        },
+        rush: {
+          title: 'Servicio Rápido / Mismo Día',
+          helper: 'Debe programarse antes de las 12 PM\nMínimo 30 lb',
+          price: '+$0.25–$0.50/lb'
+        },
+        specialty: {
+          title: 'Artículos Especiales',
+          helper: 'Edredones, alfombras, colchas, etc.',
+          price: 'Por pieza'
+        }
+      },
+      howItWorks: 'Cómo Funciona',
+      steps: {
+        step1: {
+          title: 'Contáctanos',
+          description: 'Completa el formulario rápido a continuación o llámanos para programar una consulta.'
+        },
+        step2: {
+          title: 'Recogemos',
+          description: 'Nuestro equipo llega a tu negocio para pesar y recoger tu lavandería.'
+        },
+        step3: {
+          title: 'Lavamos y Doblamos',
+          description: 'Todo se lava, sanitiza y dobla profesionalmente.'
+        },
+        step4: {
+          title: 'Entregamos',
+          description: 'Lavandería fresca, de vuelta a tu puerta — a tiempo, siempre.'
+        }
+      },
+      benefits: {
+        title: 'Limpio para Ti y el Planeta',
+        ecoFriendly: {
+          title: 'Proceso Ecológico',
+          description: 'Utilizamos lavadoras de alta eficiencia, detergentes ecológicos y sistemas de agua optimizados para garantizar resultados de máxima calidad con mínimo impacto ambiental.'
+        },
+        serviceAreas: {
+          title: 'Áreas de Servicio',
+          description: 'Servimos con orgullo East Los Angeles, Whittier, Montebello, Pico Rivera, Commerce y áreas circundantes.'
+        },
+        localBusiness: {
+          title: 'Propiedad Local y Operación Familiar',
+          description: 'Abierto 7 días a la semana con entrega rápida. Tu negocio obtiene limpieza premium — sin desperdicio.'
+        },
+        contactInfo: {
+          title: 'Obtén una Cotización Gratuita Hoy',
+          description: '¿Listo para simplificar la lavandería de tu negocio? Completa el formulario a continuación o llama al (323) 840-1696 para programar tu primera recogida.'
+        }
+      },
+      cta: {
+        title: '¿Listo para Optimizar tu Lavandería Comercial?',
+        description: 'Déjanos manejar tus necesidades de lavandería a granel para que puedas enfocarte en tu negocio.',
+        button: 'Llamar Ahora',
+        getQuote: 'Obtener Cotización',
+        pricing: 'Ver Precios'
+      }
     }
   },
 
@@ -212,9 +301,9 @@ export const es = {
       message: 'Cuéntanos sobre tus necesidades de limpieza...',
       submit: 'Enviar Mensaje',
       services: {
-        residential: 'Lavandería de Autoservicio',
-        commercial: 'Lavado y Doblado',
-        deepCleaning: 'Servicio de Lavandería de Recogida y Entrega'
+        commercial: 'Servicios de Lavandería Comercial',
+        deepCleaning: 'Lavado y Doblado',
+        pickupDelivery: 'Servicio de Lavandería de Recogida y Entrega'
       },
       communicationMethods: {
         phone: 'Llamada Telefónica',

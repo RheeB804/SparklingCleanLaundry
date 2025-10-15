@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './PickupDeliveryPage.css';
 import { useTranslation } from '../hooks/useTranslation';
 import { trackButtonClick, trackPhoneCall } from '../utils/analytics';
+import SEO from '../components/SEO';
 
 const PickupDeliveryPage = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -33,14 +34,69 @@ const PickupDeliveryPage = () => {
   }, []);
 
   return (
-    <div className="page-container">
+    <>
+      <SEO
+        title={`${t('services.pickupDelivery.pageTitle')} - Sparkling Clean Laundry`}
+        description={t('services.pickupDelivery.pageSubtitle')}
+        keywords="pickup delivery laundry, door to door laundry, laundry pickup service, East Los Angeles, convenient laundry, home laundry service"
+        canonical="/pickupdelivery"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": t('services.pickupDelivery.pageTitle'),
+          "description": t('services.pickupDelivery.pageSubtitle'),
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Sparkling Clean Laundry",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "5127 Whittier Blvd",
+              "addressLocality": "East Los Angeles",
+              "addressRegion": "CA",
+              "postalCode": "90022",
+              "addressCountry": "US"
+            },
+            "telephone": "(323) 840-1696"
+          },
+          "areaServed": [
+            "East Los Angeles",
+            "Whittier",
+            "Montebello",
+            "Pico Rivera",
+            "Commerce"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Pickup & Delivery Laundry Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pickup & Delivery Service",
+                  "description": "Door-to-door laundry pickup and delivery service"
+                },
+                "price": "2.25",
+                "priceCurrency": "USD",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "2.25",
+                  "priceCurrency": "USD",
+                  "unitText": "per pound"
+                }
+              }
+            ]
+          }
+        }}
+      />
+      <div className="page-container pickup-page">
       <div className="page-header">
         <div className="container">
           <h1>{t('services.pickupDelivery.pageTitle')}</h1>
           <p>{t('services.pickupDelivery.pageSubtitle')}</p>
           <div className="page-header-actions">
             <a href="tel:+13238401696" className="primary-button" onClick={() => trackPhoneCall('(323) 840-1696')}>{t('services.pickupDelivery.cta.button')}</a>
-            <a href="/contact" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery Header')}>{t('services.pickupDelivery.cta.getQuote')}</a>
+            <a href="/contact?service=pickup-delivery" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery Header')}>{t('services.pickupDelivery.cta.getQuote')}</a>
             <button onClick={scrollToPricing} className="pricing-button">{t('services.pickupDelivery.cta.pricing')}</button>
           </div>
         </div>
@@ -143,12 +199,13 @@ const PickupDeliveryPage = () => {
             <p>{t('services.pickupDelivery.cta.description')}</p>
             <div className="contact-buttons">
               <a href="tel:+13238401696" className="primary-button" onClick={() => trackPhoneCall('(323) 840-1696')}>{t('services.pickupDelivery.cta.button')}</a>
-              <a href="/contact" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery CTA')}>{t('services.pickupDelivery.cta.getQuote')}</a>
+              <a href="/contact?service=pickup-delivery" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery CTA')}>{t('services.pickupDelivery.cta.getQuote')}</a>
             </div>
           </div>
         </div>
       </section>
     </div>
+    </>
   );
 };
 

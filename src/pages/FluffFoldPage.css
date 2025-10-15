@@ -3,19 +3,19 @@
    ======================================== */
 
 /* Page Layout */
-.page-container {
+.flufffold-page.page-container {
   min-height: calc(100vh - 80px);
   padding-top: 80px;
 }
 
-.container {
+.flufffold-page .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 /* Page Header */
-.page-header {
+.flufffold-page .page-header {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
   padding: 80px 0 60px;
@@ -94,26 +94,26 @@
 }
 
 /* Service Details Section */
-.service-details {
+.flufffold-page .service-details {
   padding: 80px 0;
   background: #f8f9fa;
 }
 
-.service-grid {
+.flufffold-page .service-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 60px;
   margin-bottom: 80px;
 }
 
-.service-content h2 {
+.flufffold-page .service-content h2 {
   font-size: 2.5rem;
   color: #2d3748;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.service-content p {
+.flufffold-page .service-content p {
   font-size: 1.1rem;
   color: #4a5568;
   line-height: 1.7;
@@ -121,13 +121,13 @@
 }
 
 /* Service Features */
-.service-features {
+.flufffold-page .service-features {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
 
-.feature-item {
+.flufffold-page .feature-item {
   display: flex;
   align-items: flex-start;
   gap: 20px;
@@ -138,11 +138,11 @@
   transition: transform 0.3s ease;
 }
 
-.feature-item:hover {
+.flufffold-page .feature-item:hover {
   transform: translateY(-5px);
 }
 
-.feature-icon {
+.flufffold-page .feature-icon {
   font-size: 2.5rem;
   flex-shrink: 0;
   display: flex;
@@ -155,7 +155,7 @@
   margin-top: 5px;
 }
 
-.feature-item h3 {
+.flufffold-page .feature-item h3 {
   font-size: 1.3rem;
   color: #2d3748;
   margin-bottom: 8px;
@@ -164,7 +164,7 @@
   line-height: 1.3;
 }
 
-.feature-item p {
+.flufffold-page .feature-item p {
   color: #718096;
   margin: 0;
   font-size: 1rem;
@@ -172,7 +172,7 @@
   line-height: 1.5;
 }
 
-.feature-item > div {
+.flufffold-page .feature-item > div {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -234,7 +234,7 @@
   font-size: 1.1rem;
 }
 
-.cta-button {
+.flufffold-page .cta-button {
   width: 100%;
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
   color: white;
@@ -246,9 +246,12 @@
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
-.cta-button:hover {
+.flufffold-page .cta-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
@@ -269,9 +272,9 @@
   font-weight: 700;
 }
 
-.steps-grid {
+.flufffold-page .steps-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 40px auto 0;
@@ -279,7 +282,7 @@
 }
 
 /* Step Styles - Desktop */
-.step {
+.flufffold-page .step {
   text-align: center;
   padding: 40px 20px;
   background: #f8f9fa;
@@ -292,13 +295,13 @@
   align-items: center;
 }
 
-.step:hover {
+.flufffold-page .step:hover {
   transform: translateY(-5px);
   background: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.step-number {
+.flufffold-page .step-number {
   width: 60px;
   height: 60px;
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
@@ -312,7 +315,7 @@
   flex-shrink: 0;
 }
 
-.step h3 {
+.flufffold-page .step h3 {
   font-size: 1.3rem;
   color: #2d3748;
   margin-bottom: 15px;
@@ -320,7 +323,7 @@
   flex-grow: 0;
 }
 
-.step p {
+.flufffold-page .step p {
   color: #718096;
   line-height: 1.6;
   margin: 0;
@@ -343,7 +346,7 @@
     font-size: 1.1rem;
   }
 
-  .service-grid {
+  .flufffold-page .service-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -357,40 +360,41 @@
     font-size: 2rem;
   }
 
-  .steps-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .flufffold-page .steps-grid {
+    grid-template-columns: 1fr;
     gap: 20px;
     max-width: 100%;
   }
   
-  .step {
-    height: 140px;
-    padding: 10px 8px;
+  .flufffold-page .step {
+    min-height: auto;
+    padding: 20px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
 
-  .step-number {
-    width: 24px;
-    height: 24px;
-    font-size: 0.75rem;
+  .flufffold-page .step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin: 0 auto 20px;
+  }
+
+  .flufffold-page .step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.3;
     flex-shrink: 0;
   }
 
-  .step h3 {
-    font-size: 0.85rem;
-    margin-bottom: 4px;
+  .flufffold-page .step p {
+    font-size: 1rem;
     text-align: center;
-    line-height: 1.1;
-    flex-shrink: 0;
-  }
-
-  .step p {
-    font-size: 0.75rem;
-    text-align: center;
-    line-height: 1.2;
+    line-height: 1.6;
     margin: 0;
     flex-grow: 1;
     display: flex;
@@ -398,7 +402,7 @@
     justify-content: center;
   }
 
-  .feature-item {
+  .flufffold-page .feature-item {
     padding: 20px;
   }
 
@@ -416,39 +420,40 @@
 
 /* Mobile Styles (480px and below) */
 @media (max-width: 480px) {
-  .steps-grid {
+  .flufffold-page .steps-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
   
-  .step {
-    height: 180px;
-    padding: 8px 6px;
+  .flufffold-page .step {
+    min-height: auto;
+    padding: 20px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
   }
 
-  .step-number {
-    width: 20px;
-    height: 20px;
-    font-size: 0.7rem;
+  .flufffold-page .step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin: 0 auto 20px;
+  }
+
+  .flufffold-page .step h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.3;
     flex-shrink: 0;
   }
 
-  .step h3 {
-    font-size: 0.75rem;
-    margin-bottom: 3px;
+  .flufffold-page .step p {
+    font-size: 1rem;
     text-align: center;
-    line-height: 1.1;
-    flex-shrink: 0;
-  }
-
-  .step p {
-    font-size: 0.7rem;
-    text-align: center;
-    line-height: 1.1;
+    line-height: 1.6;
     margin: 0;
     flex-grow: 1;
     display: flex;

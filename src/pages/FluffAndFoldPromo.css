@@ -249,7 +249,7 @@
   border-color: #667eea;
 }
 
-.feature-icon {
+.landing-page .feature-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
   display: block;
@@ -263,14 +263,14 @@
   flex-shrink: unset !important;
 }
 
-.feature-card h3 {
+.landing-page .feature-card h3 {
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #2d3748;
 }
 
-.feature-card p {
+.landing-page .feature-card p {
   color: #4a5568;
   line-height: 1.6;
 }
@@ -687,7 +687,7 @@
 }
 
 /* Container */
-.container {
+.landing-page .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
