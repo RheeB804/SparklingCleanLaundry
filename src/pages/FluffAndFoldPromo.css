@@ -33,6 +33,16 @@
   z-index: 1;
 }
 
+/* Ensure proper desktop layout by default */
+@media (min-width: 769px) {
+  .hero-content {
+    display: grid !important;
+    grid-template-columns: 1.2fr 0.8fr !important;
+    gap: 5rem !important;
+    align-items: center !important;
+  }
+}
+
 .hero-text {
   max-width: 600px;
 }
@@ -442,6 +452,106 @@
   background: white;
   color: #3b82f6;
   transform: translateY(-2px);
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .landing-hero {
+    padding: 8rem 0 8rem;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 5rem;
+    align-items: center;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .discount-description {
+    font-size: 1.2rem;
+  }
+  
+  .hero-buttons {
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+  }
+  
+  .hero-buttons .primary-button,
+  .hero-buttons .secondary-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+  
+  .hero-form {
+    padding: 3rem;
+  }
+  
+  .form-title {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+  
+  .pricing-card {
+    padding: 2.5rem;
+  }
+  
+  .cta-buttons {
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+  }
+  
+  .cta-buttons .primary-button,
+  .cta-buttons .secondary-button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1024px) {
+  .landing-hero {
+    padding: 10rem 0 10rem;
+  }
+  
+  .hero-content {
+    gap: 6rem;
+  }
+  
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-form {
+    padding: 4rem;
+  }
+  
+  .features-grid {
+    gap: 3rem;
+  }
+  
+  .pricing-grid {
+    gap: 3rem;
+  }
 }
 
 /* Responsive Design */
