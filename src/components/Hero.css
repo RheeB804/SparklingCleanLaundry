@@ -40,11 +40,14 @@
 
 .hero-content {
   color: white;
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   justify-content: center;
+  align-items: flex-start;
+  text-align: left;
   height: 100%;
 }
+
 
 .hero-buttons {
   display: flex;
@@ -69,6 +72,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: none;
+  display: inline;
 }
 
 .hero-subtitle {
@@ -228,6 +232,7 @@
     flex-direction: column !important;
     justify-content: center !important;
     align-items: flex-start !important;
+    text-align: left !important;
   }
   
   .hero-features {
