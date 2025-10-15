@@ -120,6 +120,24 @@
   transform: translateY(-2px);
 }
 
+.pricing-button {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.pricing-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
 /* Form Styles */
 .hero-form {
   background: rgba(255, 255, 255, 0.95);
@@ -183,6 +201,10 @@
 .form-submit {
   margin-top: 0.5rem;
   width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Button Styles - Using existing primary-button and secondary-button classes */
@@ -241,6 +263,125 @@
 .feature-card p {
   color: #4a5568;
   line-height: 1.6;
+}
+
+/* Pricing Section */
+.landing-pricing {
+  padding: 4rem 0;
+  background: white;
+  color: #2d3748;
+}
+
+.pricing-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #2d3748;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.pricing-card-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-description {
+  color: #718096;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.pricing-items {
+  margin-bottom: 2rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.item {
+  color: #4a5568;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.item-helper {
+  color: #718096;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.price {
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.pricing-cta-button {
+  width: 100%;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.pricing-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
 }
 
 /* CTA Section */
@@ -325,10 +466,19 @@
   
   .hero-buttons {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pricing-button {
+    width: 100%;
+    max-width: 200px;
   }
   
   .hero-form {
     padding: 2rem;
+    text-align: center;
   }
   
   .form-title {
@@ -349,6 +499,28 @@
   .secondary-button {
     width: 100%;
     max-width: 300px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .pricing-card {
+    padding: 1.5rem;
+  }
+
+  .pricing-section-title {
+    font-size: 2rem;
+  }
+  
+  /* Specific mobile centering for form submit button */
+  .form-submit.primary-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin: 0.5rem auto 0 !important;
   }
 }
 
@@ -371,6 +543,36 @@
   
   .discount-text {
     font-size: 1rem;
+  }
+  
+  /* Extra specific mobile centering for small screens */
+  .form-submit.primary-button {
+    margin: 0.5rem auto 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pricing-card {
+    padding: 1.25rem;
+  }
+
+  .pricing-section-title {
+    font-size: 1.8rem;
+  }
+
+  .pricing-button {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }
 

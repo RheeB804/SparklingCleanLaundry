@@ -5,6 +5,20 @@ import { useTranslation } from '../hooks/useTranslation';
 const FluffFoldPage = () => {
   const { t } = useTranslation();
 
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing-section');
+    if (pricingSection) {
+      const headerHeight = 80; // Account for fixed header height
+      const elementPosition = pricingSection.offsetTop;
+      const offsetPosition = elementPosition - headerHeight - 20; // Extra 20px buffer
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className="page-container">
       <div className="page-header">
@@ -14,6 +28,7 @@ const FluffFoldPage = () => {
           <div className="page-header-actions">
             <a href="tel:+13238401696" className="primary-button">{t('services.fluffFold.cta.button')}</a>
             <a href="/contact" className="secondary-button">{t('services.fluffFold.cta.getQuote')}</a>
+            <button onClick={scrollToPricing} className="pricing-button">{t('services.fluffFold.cta.pricing')}</button>
           </div>
         </div>
       </div>
@@ -54,7 +69,7 @@ const FluffFoldPage = () => {
               </div>
             </div>
 
-            <div className="service-pricing">
+            <div className="service-pricing" id="pricing-section">
               <h3>{t('services.fluffFold.pricing')}</h3>
               <div className="pricing-card">
                 <div className="price-item">

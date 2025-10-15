@@ -98,7 +98,8 @@ export const en = {
       },
       cta: {
         button: 'Call Now',
-        getQuote: 'Get Quote'
+        getQuote: 'Get Quote',
+        pricing: 'Pricing'
       }
     },
     pickupDelivery: {
@@ -136,7 +137,7 @@ export const en = {
         },
         minimum: {
           title: 'Minimum Pounds',
-          price: '10 lbs'
+          price: '30 lbs'
         }
       },
       serviceAreas: 'Service Areas',
@@ -153,7 +154,8 @@ export const en = {
         button: 'Call us to Schedule Pickup',
         buttonMobile: 'Call us to Schedule Pickup',
         buttonDesktop: 'Call us at (323) 840-1696 to schedule a pickup',
-        getQuote: 'Get a Quote'
+        getQuote: 'Get a Quote',
+        pricing: 'Pricing'
       }
     },
   },
@@ -246,6 +248,9 @@ export const en = {
     bookNow: 'Book Now',
     callNow: 'Call Now',
     learnMore: 'Learn More',
+    pricing: 'Pricing',
+    fluffFold: 'Fluff & Fold',
+    pickupDelivery: 'Pickup & Delivery',
     form: {
       title: 'Get Your Discount',
       name: 'Your Name',

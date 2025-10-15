@@ -14,6 +14,34 @@ const FluffAndFoldPromo = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing-section');
+    if (pricingSection) {
+      const headerHeight = 80; // Account for fixed header height
+      const elementPosition = pricingSection.offsetTop;
+      const offsetPosition = elementPosition - headerHeight - 20; // Extra 20px buffer
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollToForm = () => {
+    const formSection = document.getElementById('hero-form');
+    if (formSection) {
+      const headerHeight = 80; // Account for fixed header height
+      const elementPosition = formSection.offsetTop;
+      const offsetPosition = elementPosition - headerHeight - 20; // Extra 20px buffer
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -119,10 +147,13 @@ const FluffAndFoldPromo = () => {
                 <a href="/flufffold" className="secondary-button">
                   ℹ️ {t('landing.learnMore')}
                 </a>
+                <button onClick={scrollToPricing} className="pricing-button">
+                  💰 {t('landing.pricing')}
+                </button>
               </div>
             </div>
             
-            <div className="hero-form">
+            <div className="hero-form" id="hero-form">
               <div className="form-container">
                 <h2 className="form-title">{t('landing.form.title')}</h2>
                 <form onSubmit={handleSubmit} className="discount-form">
@@ -219,6 +250,74 @@ const FluffAndFoldPromo = () => {
               <div className="feature-icon">⭐</div>
               <h3>{t('landing.features.quality')}</h3>
               <p>100% satisfaction guarantee on all services</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="landing-pricing" id="pricing-section">
+        <div className="container">
+          <h2 className="pricing-section-title">Our Pricing</h2>
+          <div className="pricing-grid">
+            {/* Fluff & Fold Pricing Card */}
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <h3>{t('landing.fluffFold')} - {t('services.fluffFold.pricing')}</h3>
+                <p className="pricing-description">Professional wash, dry, and fold service</p>
+              </div>
+              <div className="pricing-items">
+                <div className="price-item">
+                  <div className="item-content">
+                    <span className="item">{t('services.fluffFold.pricingItems.nextDay.title')}</span>
+                    <span className="item-helper">{t('services.fluffFold.pricingItems.nextDay.helper').split('\n').map((line, index) => (
+                      <span key={index}>{line}{index === 0 && <br />}</span>
+                    ))}</span>
+                  </div>
+                  <span className="price">{t('services.fluffFold.pricingItems.nextDay.price')}</span>
+                </div>
+                <div className="price-item">
+                  <div className="item-content">
+                    <span className="item">{t('services.fluffFold.pricingItems.sameDay.title')}</span>
+                    <span className="item-helper">{t('services.fluffFold.pricingItems.sameDay.helper').split('\n').map((line, index) => (
+                      <span key={index}>{line}{index === 0 && <br />}</span>
+                    ))}</span>
+                  </div>
+                  <span className="price">{t('services.fluffFold.pricingItems.sameDay.price')}</span>
+                </div>
+                <div className="price-item">
+                  <span className="item">{t('services.fluffFold.pricingItems.comforters.title')}</span>
+                  <span className="price">{t('services.fluffFold.pricingItems.comforters.price')}</span>
+                </div>
+              </div>
+              <button onClick={scrollToForm} className="pricing-cta-button">
+                {t('landing.form.submit')}
+              </button>
+            </div>
+
+            {/* Pickup & Delivery Pricing Card */}
+            <div className="pricing-card">
+              <div className="pricing-card-header">
+                <h3>{t('landing.pickupDelivery')} - {t('services.pickupDelivery.pricing')}</h3>
+                <p className="pricing-description">Convenient pickup and delivery service</p>
+              </div>
+              <div className="pricing-items">
+                <div className="price-item">
+                  <span className="item">{t('services.pickupDelivery.pricingItems.twoDay.title')}</span>
+                  <span className="price">{t('services.pickupDelivery.pricingItems.twoDay.price')}</span>
+                </div>
+                <div className="price-item">
+                  <span className="item">{t('services.pickupDelivery.pricingItems.comforters.title')}</span>
+                  <span className="price">{t('services.pickupDelivery.pricingItems.comforters.price')}</span>
+                </div>
+                <div className="price-item">
+                  <span className="item">{t('services.pickupDelivery.pricingItems.minimum.title')}</span>
+                  <span className="price">{t('services.pickupDelivery.pricingItems.minimum.price')}</span>
+                </div>
+              </div>
+              <button onClick={scrollToForm} className="pricing-cta-button">
+                {t('landing.form.submit')}
+              </button>
             </div>
           </div>
         </div>

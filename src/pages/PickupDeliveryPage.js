@@ -7,6 +7,20 @@ const PickupDeliveryPage = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { t } = useTranslation();
 
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById('pricing-section');
+    if (pricingSection) {
+      const headerHeight = 80; // Account for fixed header height
+      const elementPosition = pricingSection.offsetTop;
+      const offsetPosition = elementPosition - headerHeight - 20; // Extra 20px buffer
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -27,6 +41,7 @@ const PickupDeliveryPage = () => {
           <div className="page-header-actions">
             <a href="tel:+13238401696" className="primary-button" onClick={() => trackPhoneCall('(323) 840-1696')}>{t('services.pickupDelivery.cta.button')}</a>
             <a href="/contact" className="secondary-button" onClick={() => trackButtonClick('Get a Quote', 'PickupDelivery Header')}>{t('services.pickupDelivery.cta.getQuote')}</a>
+            <button onClick={scrollToPricing} className="pricing-button">{t('services.pickupDelivery.cta.pricing')}</button>
           </div>
         </div>
       </div>
@@ -67,7 +82,7 @@ const PickupDeliveryPage = () => {
               </div>
             </div>
 
-            <div className="service-pricing">
+            <div className="service-pricing" id="pricing-section">
               <h3>{t('services.pickupDelivery.pricing')}</h3>
               <div className="pricing-card">
                 <div className="price-item">

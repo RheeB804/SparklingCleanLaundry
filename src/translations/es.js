@@ -98,7 +98,8 @@ export const es = {
       },
       cta: {
         button: 'Llamar Ahora',
-        getQuote: 'Obtener Cotización'
+        getQuote: 'Obtener Cotización',
+        pricing: 'Precios'
       }
     },
     pickupDelivery: {
@@ -136,7 +137,7 @@ export const es = {
         },
         minimum: {
           title: 'Libras Mínimas',
-          price: '10 lbs'
+          price: '30 lbs'
         }
       },
       serviceAreas: 'Áreas de Servicio',
@@ -153,7 +154,8 @@ export const es = {
         button: 'Llámanos para Programar Recogida',
         buttonMobile: 'Llámanos para Programar Recogida',
         buttonDesktop: 'Llámanos al (323) 840-1696 para programar una recogida',
-        getQuote: 'Obtener Cotización'
+        getQuote: 'Obtener Cotización',
+        pricing: 'Precios'
       }
     }
   },
@@ -246,6 +248,9 @@ export const es = {
     bookNow: 'Reservar Ahora',
     callNow: 'Llamar Ahora',
     learnMore: 'Saber Más',
+    pricing: 'Precios',
+    fluffFold: 'Lavado y Doblado',
+    pickupDelivery: 'Recogida y Entrega',
     form: {
       title: 'Obtén tu Descuento',
       name: 'Tu Nombre',

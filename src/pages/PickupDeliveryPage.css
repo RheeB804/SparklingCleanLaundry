@@ -64,6 +64,24 @@
   transform: translateY(-2px);
 }
 
+.pricing-button {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.pricing-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -442,6 +460,17 @@
     align-items: center;
   }
 
+  .page-header-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pricing-button {
+    width: 100%;
+    max-width: 200px;
+  }
+
   .primary-button,
   .secondary-button {
     width: 100%;
@@ -452,5 +481,15 @@
     display: block !important;
     width: 100%;
     margin-top: 10px;
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .pricing-button {
+    width: 100%;
+    max-width: 180px;
+    font-size: 0.9rem;
+    padding: 10px 20px;
   }
 }
