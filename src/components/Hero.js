@@ -50,6 +50,7 @@ const Hero = () => {
           <Link to="/services" className="primary-button">{t('hero.allServices')}</Link>
           <Link to="/flufffold" className="secondary-button">{t('hero.fluffFold')}</Link>
           <Link to="/pickupdelivery" className="secondary-button">{t('hero.pickupDelivery')}</Link>
+          <Link to="/commercial" className="secondary-button">{t('hero.commercial')}</Link>
         </div>
       </div>
     </section>

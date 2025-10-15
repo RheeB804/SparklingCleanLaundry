@@ -34,6 +34,15 @@ const Services = () => {
       price: t('services.pickupDelivery.price'),
       button: t('services.pickupDelivery.button'),
       link: '/contact?service=pickup-delivery'
+    },
+    {
+      id: 4,
+      icon: '🏢🧺✨',
+      title: t('services.commercial.title'),
+      description: t('services.commercial.description'),
+      price: t('services.commercial.price'),
+      button: t('services.commercial.button'),
+      link: '/contact?service=commercial'
     }
   ];
 

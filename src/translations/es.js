@@ -24,6 +24,7 @@ export const es = {
     allServices: 'Todos los Servicios',
     fluffFold: 'Lavado y Doblado',
     pickupDelivery: 'Recogida y Entrega',
+    commercial: 'Comercial',
     features: {
       professional: 'Personal Profesional',
       rated: 'Altamente Calificado',
@@ -160,6 +161,10 @@ export const es = {
       }
     },
     commercial: {
+      title: 'Servicios de Lavandería Comercial',
+      description: 'Servicios profesionales de lavandería para empresas, hoteles, restaurantes y establecimientos comerciales. Soluciones de lavandería a granel con recogida y entrega.',
+      price: 'Desde $1.25 por libra',
+      button: 'Saber Más',
       pageTitle: 'Servicios de Lavandería Comercial',
       pageSubtitle: 'Confiable. Profesional. Sin Complicaciones.',
       whatIs: '¿Qué Ofrecemos?',
@@ -182,17 +187,17 @@ export const es = {
       pricingItems: {
         standard: {
           title: 'Servicio Estándar',
-          helper: 'Incluye recogida y entrega\nMínimo 30 lb',
+          helper: 'Incluye recogida y entrega\nMínimo 50 lb',
           price: '$1.25–$1.75/lb'
         },
         highVolume: {
-          title: 'Alto Volumen (50+ lb semanales)',
+          title: 'Alto Volumen (100+ lb semanales)',
           helper: 'Precios con descuento disponibles\nContáctanos para tarifas',
           price: 'Tarifa personalizada'
         },
         rush: {
           title: 'Servicio Rápido / Mismo Día',
-          helper: 'Debe programarse antes de las 12 PM\nMínimo 30 lb',
+          helper: 'Debe programarse antes de las 12 PM\nMínimo 50 lb',
           price: '+$0.25–$0.50/lb'
         },
         specialty: {

@@ -24,6 +24,7 @@ export const en = {
     allServices: 'All Services',
     fluffFold: 'Fluff & Fold',
     pickupDelivery: 'Pickup & Delivery',
+    commercial: 'Commercial',
     features: {
       professional: 'Professional Staff',
       rated: 'Highly Rated',
@@ -160,6 +161,10 @@ export const en = {
       }
     },
     commercial: {
+      title: 'Commercial Laundry Services',
+      description: 'Professional laundry services for businesses, hotels, restaurants, and commercial establishments. Bulk laundry solutions with pickup and delivery.',
+      price: 'Starts at $1.25 per pound',
+      button: 'Learn More',
       pageTitle: 'Commercial Laundry Services',
       pageSubtitle: 'Reliable. Professional. Hassle-Free.',
       whatIs: 'What We Offer',
@@ -182,17 +187,17 @@ export const en = {
       pricingItems: {
         standard: {
           title: 'Standard Service',
-          helper: 'Includes pickup & delivery\n30 lb minimum',
+          helper: 'Includes pickup & delivery\n50 lb minimum',
           price: '$1.25–$1.75/lb'
         },
         highVolume: {
-          title: 'High Volume (50+ lb weekly)',
+          title: 'High Volume (100+ lb weekly)',
           helper: 'Discounted pricing available\nContact us for rates',
           price: 'Custom rate'
         },
         rush: {
           title: 'Rush / Same-Day Service',
-          helper: 'Must be scheduled before 12 PM\n30 lb minimum',
+          helper: 'Must be scheduled before 12 PM\n50 lb minimum',
           price: '+$0.25–$0.50/lb'
         },
         specialty: {
