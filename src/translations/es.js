@@ -80,7 +80,7 @@ export const es = {
         },
         comforters: {
           title: 'Edredones',
-          price: '$13.00 cada uno'
+          price: '$15.00 cada uno'
         }
       },
       howItWorks: 'Cómo Funciona',

@@ -80,7 +80,7 @@ export const en = {
         },
         comforters: {
           title: 'Comforters',
-          price: '$13.00 each'
+          price: '$15.00 each'
         }
       },
       howItWorks: 'How It Works',
