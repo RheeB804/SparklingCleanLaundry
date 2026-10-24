@@ -115,12 +115,6 @@ const Contact = () => {
       // Track successful form submission
       trackContactFormSubmit('contact_form');
       
-      // Track Google Ads conversion
-      if (typeof gtag !== 'undefined') {
-        // eslint-disable-next-line no-undef
-        gtag('event', 'conversion', {'send_to': 'AW-16557733247/iiOiCIjni4YbEP_qq9c9'});
-      }
-      
       // Mark as submitted and reset form
       setIsSubmitted(true);
       setIsSubmitting(false);
